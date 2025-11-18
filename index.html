@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noli Me Travel: Rizal’s Voyage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="viewport">
+        <div id="content">
+            <img 
+                id="map-image"
+                src="placeholder-map.png" 
+                alt="Hand-drawn map depicting the journey of Jose Rizal from the Philippines to Spain, including stopovers in various countries."
+                data-content-width="1500" 
+                data-content-height="1000" 
+            >
+            
+            <button class="marker" id="marker-ph" data-location="philippines" style="top: 100px; left: 0070px;" aria-label="Philippines">🇵🇭</button>
+            <button class="marker" id="marker-sg" data-location="singapore" style="top: 800px; left: 400px;" aria-label="Singapore">🇸🇬</button>
+        </div>
+    </div>
+
+    <!-- Timeline -->
+    <div id="timeline-bar">
+        <div id="progress"></div>
+        <ul id="timeline-list">
+            <li id="timeline-ph" data-location="philippines" data-step="1">🇵🇭 Philippines</li>
+            <li id="timeline-sg" data-location="singapore" data-step="2">🇸🇬 Singapore</li>
+        </ul>
+    </div>
+    
+    <!-- Info Overlay Modal -->
+    <div id="info-overlay" class="hidden" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-content">
+            <h3 id="modal-title"></h3>
+            <p id="modal-content"></p>
+            <button id="close-modal" aria-label="Close modal">Close</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
