@@ -5,17 +5,17 @@ const sidePanel = document.querySelector(".side-panel");
 const container = document.querySelector(".side-panel .container");
 const closeBtn = document.querySelector(".close-btn");
 const loading = document.querySelector(".loading");
-const zoomInBtn = document.getElementById(".zoom-in");
-const zoomOutBtn = document.getElementById(".zoom-out");
-const zoomValueOutput = document.getElementById(".zoom-value");
+const zoomInBtn = document.querySelector(".zoom-in");
+const zoomOutBtn = document.querySelector(".zoom-out");
+const zoomValueOutput = document.querySelector(".zoom-value");
 
 //Data Outputs
-const countryNameOutput = document.getElementById(".country-name");
-const countryFlagOutput = document.getElementById(".country-flag");
-const cityOutput = document.getElementById(".city");
-const areaOutput = document.getElementById(".area");
-const currencyOutput = document.getElementById(".currency");
-const languagesOutput = document.getElementById(".languages");
+const countryNameOutput = document.querySelector(".country-name");
+const countryFlagOutput = document.querySelector(".country-flag");
+const cityOutput = document.querySelector(".city");
+const areaOutput = document.querySelector(".area");
+const currencyOutput = document.querySelector(".currency");
+const languagesOutput = document.querySelector(".languages");
 
 //Loop through all countries on the map
 countries.forEach((country) => {
@@ -132,8 +132,8 @@ zoomOutBtn.disabled = true;
 zoomInBtn.addEventListener("click", () => {
     //Enable zoom out button
     zoomOutBtn.disabled = false;
-    //Increase zoom value by 100
-    zoomValue += 100;
+    //Increase zoom value by 50
+    zoomValue += 50;
     //If zoom value is under 500
     if(zoomValue < 500) {
         //Enable zoom in button
@@ -152,8 +152,8 @@ zoomInBtn.addEventListener("click", () => {
 zoomOutBtn.addEventListener("click", () => {
     //Enable zoom in button
     zoomInBtn.disabled = false;
-    //Decrease zoom value by 100
-    zoomValue -= 100;
+    //Decrease zoom value by 50
+    zoomValue -= 50;
     //If zoom value is above 100
     if(zoomValue > 100) {
         //Enable zoom out button
