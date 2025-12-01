@@ -1,211 +1,170 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const viewport = document.getElementById('viewport');
-    const content = document.getElementById('content');
-    const mapImage = document.getElementById('map-image');
-    const timelineList = document.getElementById('timeline-list');
-    const progressFill = document.getElementById('progress').querySelector('div');
-    const overlay = document.getElementById('info-overlay');
-    const modalTitle = document.getElementById('modal-title');
-    const modalContent = document.getElementById('modal-content');
-    const closeModalBtn = document.getElementById('close-modal');
+//Get needed element rom the DOM
+const map = document.querySelector("svg");
+const countries = document.querySelectorAll("path");
+const sidePanel = document.querySelector(".side-panel");
+const container = document.querySelector(".side-panel .container");
+const closeBtn = document.querySelector(".close-btn");
+const loading = document.querySelector(".loading");
+const zoomInBtn = document.getElementById(".zoom-in");
+const zoomOutBtn = document.getElementById(".zoom-out");
+const zoomValueOutput = document.getElementById(".zoom-value");
 
-    let isDragging = false;
-    let startX = 0, startY = 0, currentX = 0, currentY = 0, scale = 1;
-    const MAX_SCALE = 4, ZOOM_SPEED = 0.001, TOTAL_STEPS = 3;
-    let VIEWPORT_WIDTH = viewport.clientWidth, VIEWPORT_HEIGHT = viewport.clientHeight;
-    const CONTENT_WIDTH = parseFloat(mapImage.getAttribute('data-content-width'));
-    const CONTENT_HEIGHT = parseFloat(mapImage.getAttribute('data-content-height'));
-    let MIN_SCALE = calculateMinScale();
+//Data Outputs
+const countryNameOutput = document.getElementById(".country-name");
+const countryFlagOutput = document.getElementById(".country-flag");
+const cityOutput = document.getElementById(".city");
+const areaOutput = document.getElementById(".area");
+const currencyOutput = document.getElementById(".currency");
+const languagesOutput = document.getElementById(".languages");
 
-    // Target Coordinates (stopovers)
-    const STOPOVER_COORDS = {
-        "philippines": { 
-            x: -800, 
-            y: 1500,
-            scale: 2.5,
-            anecdote: "Rizal secretly left the Philippines." 
-        },
-        "singapore": { 
-            x: -100,
-            y: 250,
-            scale: 3.0, 
-            anecdote: "In Singapore, Rizal was deeply impressed by the botanical gardens and the beauty of the city." 
-        },
-    };
-
-    // Functions
-    function calculateMinScale() {
-        return Math.max(VIEWPORT_WIDTH / CONTENT_WIDTH, VIEWPORT_HEIGHT / CONTENT_HEIGHT);
-    }
-
-    function clampPosition() {
-        const minX = VIEWPORT_WIDTH - (CONTENT_WIDTH * scale);
-        const minY = VIEWPORT_HEIGHT - (CONTENT_HEIGHT * scale);
-        currentX = Math.min(currentX, 0);
-        currentX = Math.max(currentX, minX);
-        currentY = Math.min(currentY, 0);
-        currentY = Math.max(currentY, minY);
-    }
-
-    function updateTransform(useTransition = false) {
-        clampPosition();
-        content.style.transition = useTransition ? 'transform 0.8s ease-in-out' : 'none';
-        content.style.transform = `translate(${currentX}px, ${currentY}px) scale(${scale})`;
-
-        if (useTransition) {
-            setTimeout(() => content.style.transition = 'none', 900);
+//Loop through all countries on the map
+countries.forEach((country) => {
+    //Add mouse enter event to each country (cursor enters a country)
+    country.addEventListener("mouseenter", function() {
+        //Get all classes of element the mouse enters
+        const classList = [...this.classList].join('.');
+        console.log(classList);
+        //Create a selector for matching classes
+        const selector = '.' + classList;
+        //Select all matching elements /
+        //Select all pieces of land (svg paths) 
+        //that belong to the same country
+        const matchingElements = document.querySelectorAll(selector);
+        //Add hover effect to all matching elements
+        matchingElements.forEach(el => el.style.fill = "#c99aff");
+    });
+    //Add a mouse out event (cursor leaves a country)
+    country.addEventListener("mouseout", function() {
+        //Remove hovered styles from matching elements
+        const classList = [...this.classList].join('.');
+        const selector = '.' + classList;
+        const matchingElements = document.querySelectorAll(selector);
+        matchingElements.forEach(el => el.style.fill = "#443d4b");
+    });
+    //Add click event to each country
+    country.addEventListener("click", function(e) {
+        //Set loading text
+        loading.innerText = "Boneks...";
+        //Hide country data container
+        container.classList.add("hide");
+        //Show loading screen
+        loading.classList.remove("hide");
+        //Variable to hold the country name
+        let clickedCountryName;
+        //If the clicked svg path (country) has a name attribute
+        if(e.target.hasAttribute("name")) {
+            //Get the value of the name attribute (country name)
+            clickedCountryName = e.target.getAttribute("name");
+        //If it doesn't have a name attribute
+        } else {
+            //Get the class name (country name)
+            clickedCountryName = e.target.classList.value;
         }
-    }
-
-    function updateTimeline(locationId) {
-        let currentStep = 0;
-
-        timelineList.querySelectorAll('li').forEach(li => {
-            const step = parseInt(li.dataset.step);
-            li.classList.remove('active-stopover', 'completed-stopover');
-
-            if (li.dataset.location === locationId) {
-                li.classList.add('active-stopover');
-                currentStep = step;
+        //Open the side panel
+        sidePanel.classList.add("side-panel-open");
+        //Use fetch to get data from the API fuck this shit
+        fetch(`https://restcountries.com/v3.1/name/${clickedCountryName}?fullText=true`)
+        .then(response => {
+            //Check if the response is okay
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
             }
-
-            if (step < currentStep) {
-                li.classList.add('completed-stopover');
-            }
+            //Parse the response as JSON
+            return response.json();
+        })
+        .then(data => {
+            console.log(data);
+            //Delay the code inside for half a second
+            setTimeout(() => {
+                //Extract data and output to the side panel (country name)
+                countryNameOutput.innerText = data[0].name.common;
+                //Flag image
+                countryFlagOutput.src = data[0].flags.png;
+                //Capital city
+                cityOutput.innerText = data[0].capital;
+                //Area
+                const formatedNumber = data[0].area.toLocaleString('de-DE');
+                areaOutput.innerHTML = formatedNumber + ` km<sup>2</sup>`;
+                //Currency
+                const currencies = data[0].currencies;
+                //Set currency to empty string
+                currencyOutput.innerText = "";
+                //Loop through each object key
+                Object.keys(currencies).forEach(key => {
+                    //Output the name of each currency
+                    currencyOutput.innerHTML += `<li>${currencies[key].name}</li>`;
+                });
+                //Languages
+                const languages = data[0].languages;
+                languagesOutput.innerText = "";
+                Object.keys(languages).forEach(key => {
+                    languagesOutput.innerHTML += `<li>${languages[key]}</li>`;
+                });
+                //Wait new flag image to load
+                countryFlagOutput.onload = () => {
+                    //Show container with country data
+                    container.classList.remove("hide");
+                    //Hide loading screen
+                    loading.classList.add("hide");
+                };
+            }, 500);
+        })
+        //Handle errors
+        .catch(error => {
+            //Output explanatory text
+            loading.innerText = "Boneks! No data found.";
+            console.error('There has been a problem with your fetch operation:', error);
         });
+    });
+});
 
-        const progressPercentage = ((currentStep - 1) / (TOTAL_STEPS - 1)) * 100;
-        if (progressFill) progressFill.style.width = `${progressPercentage}%`;
+//Add click event to close button
+closeBtn.addEventListener("click", () => {
+    //Close the side panel
+    sidePanel.classList.remove("side-panel-open");
+});
+
+//Variable to contain the current zoom value
+let zoomValue = 100;
+//Disable zoom out button on load
+zoomOutBtn.disabled = true;
+//Add click event to zoom in button
+zoomInBtn.addEventListener("click", () => {
+    //Enable zoom out button
+    zoomOutBtn.disabled = false;
+    //Increase zoom value by 100
+    zoomValue += 100;
+    //If zoom value is under 500
+    if(zoomValue < 500) {
+        //Enable zoom in button
+        zoomInBtn.disabled = false;
+    } else {
+        //Disable zoom in button
+        zoomInBtn.disabled = true;
     }
-
-    function zoomToLocation(locationId) {
-        const target = STOPOVER_COORDS[locationId];
-        if (!target) return;
-
-        scale = target.scale;
-        currentX = target.x;
-        currentY = target.y;
-
-        updateTimeline(locationId);
-        updateTransform(true);
-
-        modalTitle.textContent = `Rizal in ${locationId.toUpperCase()}`;
-        modalContent.innerHTML = `
-            <strong>Historical Note:</strong> ${target.anecdote}
-            <br><br>
-            <p>Click on interactive elements near this location to learn more!</p>
-        `;
-        overlay.classList.remove('hidden');
+    //Set map width and height according to zoom value
+    map.style.width = zoomValue + "vw";
+    map.style.height = zoomValue + "vh";
+    //Output zoom value percentage
+    zoomValueOutput.innerText = zoomValue + "%";
+});
+//Zoom out button click event
+zoomOutBtn.addEventListener("click", () => {
+    //Enable zoom in button
+    zoomInBtn.disabled = false;
+    //Decrease zoom value by 100
+    zoomValue -= 100;
+    //If zoom value is above 100
+    if(zoomValue > 100) {
+        //Enable zoom out button
+        zoomOutBtn.disabled = false;
+    } else {
+        //Disable zoom out button
+        zoomOutBtn.disabled = true;
     }
-
-    function resetMapPosition() {
-        scale = MIN_SCALE;
-        currentX = (VIEWPORT_WIDTH - (CONTENT_WIDTH * scale)) / 2;
-        currentY = (VIEWPORT_HEIGHT - (CONTENT_HEIGHT * scale)) / 2;
-        updateTransform(false);
-        updateTimeline("philippines");
-    }
-
-    function initializeMapState() {
-        MIN_SCALE = calculateMinScale();
-        scale = MIN_SCALE;
-        currentX = (VIEWPORT_WIDTH - (CONTENT_WIDTH * scale)) / 2;
-        currentY = (VIEWPORT_HEIGHT - (CONTENT_HEIGHT * scale)) / 2;
-        updateTransform(true);
-        updateTimeline("philippines");
-    }
-
-    // Event Listeners
-
-    // Marker Click
-    document.getElementById('marker-ph').addEventListener('click', () => {
-        zoomToLocation("philippines");
-    });
-    
-    document.getElementById('marker-sg').addEventListener('click', () => {
-        zoomToLocation("singapore");
-    });
-
-    // Timeline Click
-    timelineList.addEventListener('click', (e) => {
-        if (e.target.tagName === 'LI') zoomToLocation(e.target.dataset.location);
-    });
-
-    // Close Modal
-    closeModalBtn.addEventListener('click', () => {
-        overlay.classList.add('hidden');
-        resetMapPosition();
-    });
-
-    // Panning (Dragging)
-    let lastX = 0, lastY = 0;
-    
-    // Trackpad / Mouse Dragging
-    const handleDrag = (e) => {
-        if (e.touches && e.touches.length === 2) { // Trackpad
-            const newX = e.touches[0].clientX - lastX;
-            const newY = e.touches[0].clientY - lastY;
-            currentX = newX;
-            currentY = newY;
-            updateTransform(false);
-        } else if (e.buttons === 1) { // Mouse Dragging
-            const newX = e.clientX - lastX;
-            const newY = e.clientY - lastY;
-            currentX = newX;
-            currentY = newY;
-            updateTransform(false);
-        }
-    };
-
-    const startDrag = (e) => {
-        if (e.touches && e.touches.length === 2) { // Trackpad Two-finger start
-            lastX = e.touches[0].clientX - currentX;
-            lastY = e.touches[0].clientY - currentY;
-            isDragging = true;
-            viewport.style.cursor = 'grabbing';
-        } else if (e.button === 0) { // Mouse Dragging start
-            lastX = e.clientX - currentX;
-            lastY = e.clientY - currentY;
-            isDragging = true;
-            viewport.style.cursor = 'grabbing';
-        }
-    };
-
-    const stopDrag = () => {
-        isDragging = false;
-        viewport.style.cursor = 'grab';
-    };
-
-    // Panning Events for Touch and Mouse
-    viewport.addEventListener('touchstart', startDrag);
-    viewport.addEventListener('touchmove', handleDrag);
-    viewport.addEventListener('touchend', stopDrag);
-    viewport.addEventListener('mousedown', startDrag);
-    viewport.addEventListener('mousemove', handleDrag);
-    viewport.addEventListener('mouseup', stopDrag);
-
-    // Zooming (Trackpad and Mouse Wheel)
-    viewport.addEventListener('wheel', (e) => {
-        e.preventDefault();
-        content.style.transition = 'none';
-
-        const delta = -e.deltaY;
-        let newScale = scale + delta * ZOOM_SPEED;
-        const newScaleClamped = Math.min(Math.max(MIN_SCALE, newScale), MAX_SCALE);
-        if (newScaleClamped === scale) return;
-
-        const rect = viewport.getBoundingClientRect();
-        const cursorX = e.clientX - rect.left;
-        const cursorY = e.clientY - rect.top;
-        const deltaScale = newScaleClamped / scale;
-
-        currentX = (currentX - cursorX) * deltaScale + cursorX;
-        currentY = (currentY - cursorY) * deltaScale + cursorY;
-
-        scale = newScaleClamped;
-        updateTransform(false);
-    });
-
-    // Start at the Philippines, centered and at MIN_SCALE
-    initializeMapState();
+    //Set map width and height according to zoom value
+    map.style.width = zoomValue + "vw";
+    map.style.height = zoomValue + "vh";
+    //Output zoom value percentage
+    zoomValueOutput.innerText = zoomValue + "%";
 });
