@@ -33,7 +33,7 @@ This project is inspired by the interactive website **[Pencilvania 🐕](https:/
 ## 📑 Project Outline
 
 ### 1️⃣ Introduction (Welcome Modal Popup)
-- Warm greeting for users  
+- Greeting for users  
 - Brief overview of Rizal’s life and travels  
 - Significance of his journey from the Philippines to Spain  
 - Connection between his travel experiences and intellectual awakening  
