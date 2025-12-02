@@ -44,7 +44,7 @@ countries.forEach((country) => {
     //Add click event to each country
     country.addEventListener("click", function(e) {
         //Set loading text
-        loading.innerText = "Boneks...";
+        loading.innerText = "Naliligaw ka. Hindi dumaan si Rizal dito. 😉";
         //Hide country data container
         container.classList.add("hide");
         //Show loading screen
