@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <link rel="stylesheet" href="../public/css/styles.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Pinyon+Script&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
@@ -40,7 +40,7 @@
     <div id="welcomeModal" class="modal active">
         <div class="modal-backdrop"></div>
         <div class="vintage-paper-modal">
-                       
+                        
             <div class="book-page active" data-page="1">
                 <div class="paper-content">
                     <h1 class="elegant-title">Welcome to Noli Me Travel</h1>
@@ -83,7 +83,6 @@
         </div>
     </div>
 
-    <!-- how it fucking works -->
     <div id="aboutModal" class="modal">
         <div class="modal-backdrop"></div>
         <div class="vintage-paper-modal">
@@ -134,7 +133,7 @@
 
     <div class="world-map">
         <div class="map-container">
-            <?php include 'world-map.php'; ?>
+            <?php include __DIR__ . '/world-map.php'; ?>
         </div>
     </div>
 
@@ -143,7 +142,7 @@
         <div class="container">
             <h1 class="country-name">Philippines</h1>
             <div class="photo-slot">
-                <img src="./flag.png" class="country-flag" style="display:none;">
+                <img src="../public/assets/flag.png" class="country-flag" style="display:none;">
             </div>
             <div class="handwritten-notes">
                 <p><strong>Date:</strong> <span class="date"></span></p>
