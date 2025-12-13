@@ -598,3 +598,111 @@ g.active-highlight path {
         filter: drop-shadow(0 0 3px rgba(184, 134, 11, 0.4));
     }
 }
+
+/* --- assetsS / POLAROIDS IN JOURNAL --- */
+.assetss-container {
+    margin-top: 40px;
+    border-top: 1px dashed var(--gold-accent);
+    padding-top: 20px;
+}
+
+.handwritten-heading {
+    font-family: var(--font-script);
+    font-size: 2rem;
+    color: var(--ink-color);
+    text-align: center;
+    margin-bottom: 20px;
+    transform: rotate(-2deg);
+}
+
+.polaroid-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.polaroid-item {
+    background: #fff;
+    padding: 10px 10px 35px 10px; /* Extra bottom padding for caption */
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    transform: rotate(2deg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    width: 160px;
+    text-align: center;
+    position: relative;
+}
+
+.polaroid-item:hover {
+    transform: scale(1.05) rotate(0deg);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+    z-index: 10;
+}
+
+.polaroid-item:nth-child(even) {
+    transform: rotate(-3deg);
+}
+
+.polaroid-item img {
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+    border: 1px solid #eee;
+    margin-bottom: 8px;
+    display: block; /* Fix spacing */
+}
+
+.polaroid-item .caption {
+    font-family: var(--font-script);
+    font-size: 1.1rem;
+    color: #555;
+    display: block;
+    line-height: 1;
+}
+
+/* popup modal for assets */
+#assetsModal {
+    z-index: 2000;
+}
+
+.assets-card {
+    background: #fdfbf7;
+    padding: 20px;
+    max-width: 500px;
+    width: 90%;
+    border-radius: 2px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    text-align: center;
+    border: 10px solid white;
+    outline: 1px solid #ddd;
+}
+
+.assets-image-large {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    background: #f0f0f0;
+    margin-bottom: 15px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+}
+
+.assets-title {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: var(--ink-color);
+    margin-bottom: 10px;
+    border-bottom: 2px double var(--gold-accent);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.assets-desc {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #444;
+    padding: 0 10px;
+    font-style: italic;
+}

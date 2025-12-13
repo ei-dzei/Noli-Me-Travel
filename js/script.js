@@ -134,7 +134,6 @@ const zoomTarget = mapContainer; const maxZoom = 4; const minZoom = 1;
 function updateTransform() {
     zoomTarget.style.transform = `translate(${currentTranslateX}px, ${currentTranslateY}px) scale(${currentScale})`;
     zoomValueOutput.innerText = Math.round(currentScale * 100) + "%";
-    zoomTarget.style.transformOrigin = "0 0";
 }
 
 mapContainer.addEventListener("mousedown", (e) => { if(e.button !== 0) return; isDragging = true; hasMoved = false; startX = e.clientX; startY = e.clientY; initialTranslateX = currentTranslateX; initialTranslateY = currentTranslateY; mapContainer.classList.add("grabbing"); });
@@ -241,4 +240,22 @@ function closeCountryModal() {
 function toggleTimeline() {
     const timelineBar = document.querySelector(".timeline-bar");
     timelineBar.classList.toggle("timeline-open");
+}
+
+// --- popup modal for the assets when clicked ---
+function openassetsModal(title, description, imageSrc) {
+    const modal = document.getElementById("artifactModal");
+    const img = document.getElementById("artifactImg");
+    const titleEl = document.getElementById("artifactTitle");
+    const descEl = document.getElementById("artifactDesc");
+
+    img.src = imageSrc;
+    titleEl.innerText = title;
+    descEl.innerText = description; 
+
+    modal.classList.add("active");
+}
+
+function closeassetsModal() {
+    document.getElementById("artifactModal").classList.remove("active");
 }
