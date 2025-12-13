@@ -23,7 +23,7 @@
             <img src="../public/assets/yemen-aden/aden-city.png" alt="Aden City">
         </div>
 
-        <div class="gallery-item" onclick="openassetsModal('Camels in Aden', '', '../public/assets/yemen-aden/camels.png')">
+        <div class="gallery-item" onclick="openassetsModal('Camels in Aden', 'Rizal was amused to see the camels for the first time.', '../public/assets/yemen-aden/camels.png')">
             <img src="../public/assets/yemen-aden/camels.png" alt="Camels in Aden">
         </div>
 
