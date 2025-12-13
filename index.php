@@ -22,7 +22,7 @@
     <div class="world-map">
         <div class="map-container">
             <?php 
-            // Map created by Simplemaps.com
+            // Map created by http://mapsvg.com na siya
             include 'world-map.php';
             ?>
         </div>
@@ -52,7 +52,7 @@
         <button class="close-btn">
             <i class="fas fa-times"></i>
         </button>
-        <h2 class="loading">San ka kaya pumunta si Rizal?</h2>
+        <h2 class="loading">San na kaya pumupunta si Rizal?</h2>
     </div>
 
     <!--Mapagpanggap na zoom controls bonkers-->
@@ -61,7 +61,18 @@
         <button class="zoom-out">-</button>
         <p class="zoom-value">100%</p>
     </div>
-    
-    <script src="js/script_trial.js"></script>
+
+    <!-- Timeline na hindi reliable at kapanipaniwala bonkers -->
+    <div class="timeline-bar">
+        <button class="timeline-close-btn">
+            &times;
+        </button>
+        <div class="timeline-header">
+            Rizal's Journey in 1882
+        </div>
+        <div class="timeline-scroll-area"></div>
+    </div>
+
+    <script src="js/scriptRealYata.js"></script>
 </body>
 </html>
