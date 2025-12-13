@@ -244,10 +244,10 @@ function toggleTimeline() {
 
 // --- popup modal for the assets when clicked ---
 function openassetsModal(title, description, imageSrc) {
-    const modal = document.getElementById("artifactModal");
-    const img = document.getElementById("artifactImg");
-    const titleEl = document.getElementById("artifactTitle");
-    const descEl = document.getElementById("artifactDesc");
+    const modal = document.getElementById("assetsModal");
+    const img = document.getElementById("assetsImg");
+    const titleEl = document.getElementById("assetsTitle");
+    const descEl = document.getElementById("assetsDesc");
 
     img.src = imageSrc;
     titleEl.innerText = title;
@@ -257,5 +257,5 @@ function openassetsModal(title, description, imageSrc) {
 }
 
 function closeassetsModal() {
-    document.getElementById("artifactModal").classList.remove("active");
+    document.getElementById("assetsModal").classList.remove("active");
 }
