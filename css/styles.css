@@ -599,66 +599,91 @@ g.active-highlight path {
     }
 }
 
-/* --- assetsS / POLAROIDS IN JOURNAL --- */
-.assetss-container {
-    margin-top: 40px;
-    border-top: 1px dashed var(--gold-accent);
-    padding-top: 20px;
-}
-
-.handwritten-heading {
-    font-family: var(--font-script);
-    font-size: 2rem;
-    color: var(--ink-color);
-    text-align: center;
-    margin-bottom: 20px;
-    transform: rotate(-2deg);
-}
-
-.polaroid-gallery {
+/* --- gallery--- */
+.gallery-row {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.polaroid-item {
-    background: #fff;
-    padding: 10px 10px 35px 10px; /* Extra bottom padding for caption */
-    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
-    transform: rotate(2deg);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    width: 160px;
-    text-align: center;
-    position: relative;
-}
-
-.polaroid-item:hover {
-    transform: scale(1.05) rotate(0deg);
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
-    z-index: 10;
-}
-
-.polaroid-item:nth-child(even) {
-    transform: rotate(-3deg);
-}
-
-.polaroid-item img {
     width: 100%;
-    height: 110px;
-    object-fit: cover;
-    border: 1px solid #eee;
-    margin-bottom: 8px;
-    display: block; /* Fix spacing */
+    margin-top: 30px;
+    gap: 0;
 }
 
-.polaroid-item .caption {
-    font-family: var(--font-script);
-    font-size: 1.1rem;
-    color: #555;
+.gallery-item {
+    flex: 1;
+    height: 180px;
+    cursor: pointer;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     display: block;
+}
+
+.gallery-item:not(:last-child) {
+    border-right: 1px solid rgba(255,255,255,0.2);
+}
+
+/* --- ANIMATED PASSPORT STAMP --- */
+.passport-stamp-container {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    z-index: 100;
+    pointer-events: none;
+
+    opacity: 0;
+    transform: scale(3) rotate(-25deg);
+    animation: stamp-slam 0.5s cubic-bezier(0.25, 1, 0.5, 1) forwards 0.3s;
+}
+
+@keyframes stamp-slam {
+    to {
+        opacity: 0.85;
+        transform: scale(1) rotate(-10deg);
+    }
+}
+
+.stamp-ink {
+    width: 130px;
+    height: 130px;
+    color: #c23b22; 
+    border: 4px double #c23b22; 
+    border-radius: 50%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    font-family: 'Courier New', monospace;
+    text-transform: uppercase;
+    font-weight: bold;
     line-height: 1;
+    
+    filter: contrast(1.2) blur(0.5px); 
+    mix-blend-mode: multiply;
+    box-shadow: inset 0 0 20px rgba(194, 59, 34, 0.2);
+}
+
+.stamp-top {
+    font-size: 0.8rem;
+    margin-bottom: 5px
+}
+.stamp-center { 
+    font-size: 1.4rem; 
+    margin: 5px 0; 
+    border-top: 2px solid #c23b22; 
+    border-bottom: 2px solid #c23b22; 
+    padding: 4px 0;
+    letter-spacing: 1px;
+}
+.stamp-bottom {
+    font-size: 0.9rem;
+    margin-top: 5px;
 }
 
 /* popup modal for assets */
@@ -670,7 +695,7 @@ g.active-highlight path {
     background: #fdfbf7;
     padding: 20px;
     max-width: 500px;
-    width: 90%;
+    width: 100%;
     border-radius: 2px;
     position: relative;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
@@ -681,9 +706,7 @@ g.active-highlight path {
 
 .assets-image-large {
     width: 100%;
-    max-height: 300px;
-    object-fit: contain;
-    background: #f0f0f0;
+    object-fit: cover;
     margin-bottom: 15px;
     box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
 }
