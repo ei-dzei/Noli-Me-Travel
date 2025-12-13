@@ -19,15 +19,15 @@
     </div>
 
     <div class="assets-section gallery-row">
-        <div class="gallery-item" onclick="openassetsModal('Aden City', '', '/assets/yemen-aden/aden-city.png')">
+        <div class="gallery-item" onclick="openassetsModal('Aden City', '', '../public/assets/yemen-aden/aden-city.png')">
             <img src="../public/assets/yemen-aden/aden-city.png" alt="Aden City">
         </div>
 
-        <div class="gallery-item" onclick="openassetsModal('Camels in Aden', 'Rizal was amused to see the camels for the first time.', '/assets/yemen-aden/camels.png')">
+        <div class="gallery-item" onclick="openassetsModal('Camels in Aden', 'Rizal was amused to see the camels for the first time.', '../public/assets/yemen-aden/camels.png')">
             <img src="../public/assets/yemen-aden/camels.png" alt="Camels in Aden">
         </div>
 
-        <div class="gallery-item" onclick="openassetsModal('Mountains in Aden', '', '/assets/yemen-aden/mountains.png')">
+        <div class="gallery-item" onclick="openassetsModal('Mountains in Aden', '', '../public/assets/yemen-aden/mountains.png')">
             <img src="../public/assets/yemen-aden/mountains.png" alt="Mountains in Aden">
         </div>
     </div>

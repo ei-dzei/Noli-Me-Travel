@@ -178,7 +178,7 @@ function handleCountryClick(e) {
         modal.classList.add("active");
         contentDiv.innerHTML = '<h2 class="vintage-subtitle" style="text-align:center; margin-top:20%;">Opening archives...</h2>';
 
-        fetch(`../public/countries/${phpFileName}`)
+        fetch(`/countries/${phpFileName}`)
             .then(response => {
                 if (!response.ok) throw new Error("Network response was not ok");
                 return response.text();
