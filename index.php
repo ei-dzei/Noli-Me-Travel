@@ -15,13 +15,19 @@
     <!--Welcome Box on first visit-->
     <dialog id="welcomeDialog">
         <h2>Noli Me Travel: Rizal's Voyage</h2>
-        <p>This is an interactive map that invites users to retrace Jose Rizal’s first voyage from the Philippines to Spain through a hand-drawn 2D world. Designed as a digital learning space, it turns Rizal’s travel route into an exploratory experience to see where he went, what he encountered, and how those experiences contributed to his growth.
-	
-	This project was developed by the group of Gabryelle Doreen Amador, Duncan Red Benedict De Guzman, Angeline Joy Miguel, and Jessica Bea Novesteras as a course requirement for the subject PI 100: Life and Works of Rizal. 
+        <p>This is an interactive map that invites users to retrace Jose Rizal’s first voyage from the Philippines to Spain 
+        through a hand-drawn 2D world. Designed as a digital learning space, it turns Rizal’s travel route into an exploratory 
+        experience to see where he went, what he encountered, and how those experiences contributed to his growth.
+        This project was developed by the group of Gabryelle Doreen Amador, Duncan Red Benedict De Guzman, Angeline Joy Miguel, 
+        and Jessica Bea Novesteras as a course requirement for the subject PI 100: Life and Works of Rizal. 
 
-Each country on Rizal’s route is marked with clickable elements you are to discover, containing historical information, facts, and anecdotes linked to that specific stopover. A timeline displays the proper order of his travels, helping the users to maintain chronology while freely exploring the map. Books by Guerrero and Zaide are used as references for this project.
+        Each country on Rizal’s route is marked with clickable elements you are to discover, containing historical information, facts,
+        and anecdotes linked to that specific stopover. A timeline displays the proper order of his travels, helping the users to maintain
+        chronology while freely exploring the map. Books by Guerrero and Zaide are used as references for this project.
 
-	After closing this card, glide across Rizal’s world with your mouse or trackpad. Click, drag, and zoom around to open moments in his first travel, and trace the beginnings of his intellectual awakening. Look out for an easter egg!
+	    After closing this card, glide across Rizal’s world with your mouse or trackpad. Click, drag,
+        and zoom around to open moments in his first travel, and trace the beginnings of his intellectual awakening.
+        Look out for an easter egg!
 </p>
         <button id="closeDialog">Close</button>
     </dialog>
