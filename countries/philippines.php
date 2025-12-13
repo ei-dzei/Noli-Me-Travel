@@ -1,6 +1,6 @@
 <div>
-    <h4> Philippines - Departure </h4>
-    <h5>May 3, 1882 <br>
+    <h2> Philippines - Departure </h4>
+    <h3>May 3, 1882 <br>
         Manila, Philippines
     </h5>
     <p>
