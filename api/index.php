@@ -21,8 +21,8 @@
             </button>
         </div>
 
-        <div class="top-disclaimer tag-text">
-            <p>Noli Me Travel</p>
+        <div class="vintage-title-badge">
+            <span class="title-text">Noli Me Travel</span>
         </div>
 
         <div class="nav-item-wrapper right-corner">
