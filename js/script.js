@@ -23,12 +23,12 @@ const rizalTravels = [
     { countryKey: "PH", title: "Philippines", location: "Manila", month: "May", date: "May 3, 1882", story: "Rizal secretly leaves the Philippines for the first time on the Spanish steamer Salvadora..." },
     { countryKey: "SG", title: "Singapore", location: "Singapore", month: "May", date: "May 9-11, 1882", story: "Rizal checked into Hotel de la Paz and spent two days observing the busy harbor..." },
     { countryKey: "CL", title: "Sri Lanka", location: "Colombo", month: "May", date: "May 17-18, 1882", story: "Rizal reached Point Galle, later moving to Colombo which he found elegant." },
-    { countryKey: "EG", title: "Egypt", location: "Suez Canal", month: "May", date: "Late May 1882", story: "At the City of Suez, Rizal disembarked and went sightseeing." },
     { countryKey: "IT", title: "Italy", location: "Naples", month: "June", date: "June 11, 1882", story: "Rizal reached Naples and was captivated by Mount Vesuvius." },
     { countryKey: "FR", title: "France", location: "Marseilles", month: "June", date: "June 12-15, 1882", story: "Djemnah docked at Marseilles. Rizal visited the Château d’If." },
     { countryKey: "ES", title: "Spain", location: "Barcelona", month: "June", date: "June 16, 1882", story: "Rizal reached Barcelona and later Madrid to study." },
     { countryKey: "SO", title: "Somalia", location: "Mogadishu", month: "May", date: "Late May 1882", story: "Rizal caught a glimpse of the Somali coast as the ship passed by Mogadishu." },
     { countryKey: "AD", title: "Aden", location: "Aden", month: "May", date: "Late May 1882", story: "Rizal's ship made a brief stop at Aden, where he observed the bustling port." },
+    { countryKey: "EG", title: "Egypt", location: "Suez Canal", month: "May", date: "Late May 1882", story: "At the City of Suez, Rizal disembarked and went sightseeing." },
 ];
 
 const countryMap = {
