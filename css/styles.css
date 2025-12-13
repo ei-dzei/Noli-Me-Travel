@@ -549,3 +549,30 @@ path:hover {
     display: block;
     transform: rotate(-1deg);
 }
+
+.active-highlight {
+    fill: #d7ccc8 !important;
+    stroke: var(--gold-accent) !important;
+    stroke-width: 0.8px !important;
+
+    filter: drop-shadow(0 0 5px rgba(184, 134, 11, 0.6)); 
+    animation: vintage-pulse 2s infinite ease-in-out;
+
+    position: relative; 
+    z-index: 50; 
+}
+
+@keyframes vintage-pulse {
+    0% {
+        stroke-opacity: 1;
+        filter: drop-shadow(0 0 3px rgba(184, 134, 11, 0.4));
+    }
+    50% {
+        stroke-opacity: 0.6;
+        filter: drop-shadow(0 0 10px rgba(184, 134, 11, 0.9));
+    }
+    100% {
+        stroke-opacity: 1;
+        filter: drop-shadow(0 0 3px rgba(184, 134, 11, 0.4));
+    }
+}

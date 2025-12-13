@@ -22,11 +22,13 @@ const storyOutput = document.querySelector(".story");
 const rizalTravels = [
   { countryKey: "PH", title: "Philippines", location: "Manila", month: "May", date: "May 3, 1882", story: "Rizal secretly leaves the Philippines for the first time on the Spanish steamer Salvadora..." },
   { countryKey: "SG", title: "Singapore", location: "Singapore", month: "May", date: "May 9-11, 1882", story: "Rizal checked into Hotel de la Paz and spent two days observing the busy harbor..." },
-  { countryKey: "LK", title: "Sri Lanka", location: "Colombo", month: "May", date: "May 17-18, 1882", story: "Rizal reached Point Galle, later moving to Colombo which he found elegant." },
+  { countryKey: "CL", title: "Sri Lanka", location: "Colombo", month: "May", date: "May 17-18, 1882", story: "Rizal reached Point Galle, later moving to Colombo which he found elegant." },
   { countryKey: "EG", title: "Egypt", location: "Suez Canal", month: "May", date: "Late May 1882", story: "At the City of Suez, Rizal disembarked and went sightseeing." },
   { countryKey: "IT", title: "Italy", location: "Naples", month: "June", date: "June 11, 1882", story: "Rizal reached Naples and was captivated by Mount Vesuvius." },
   { countryKey: "FR", title: "France", location: "Marseilles", month: "June", date: "June 12-15, 1882", story: "Djemnah docked at Marseilles. Rizal visited the Château d’If." },
-  { countryKey: "ES", title: "Spain", location: "Barcelona", month: "June", date: "June 16, 1882", story: "Rizal reached Barcelona and later Madrid to study." }
+  { countryKey: "ES", title: "Spain", location: "Barcelona", month: "June", date: "June 16, 1882", story: "Rizal reached Barcelona and later Madrid to study." },
+  { countryKey: "AD", title: "Aden", location: "Aden", month: "May", date: "Mid May 1882", story: "Rizal's ship made a brief stop at Aden, where he observed the bustling port." },
+  { countryKey: "SO", title: "Somalia", location: "Mogadishu", month: "May", date: "Mid May 1882", story: "Rizal caught a glimpse of the Somali coast as the ship passed by Mogadishu." }
 ];
 
 const countryMap = {
@@ -55,6 +57,7 @@ const countryMap = {
 function getCountryIdentifier(element) {
     if (element.hasAttribute("id")) return element.getAttribute("id");
     if (element.hasAttribute("name")) return element.getAttribute("name");
+    if (element.hasAttribute("class")) return element.getAttribute("class");
     return element.classList.length > 0 ? element.classList[0] : null;
 }
 
@@ -68,6 +71,8 @@ function highlightVisitedCountries() {
         }
     });
 }
+
+// LOGIC
 
 function generateTimeline() {
     const months = {};
@@ -86,9 +91,39 @@ function generateTimeline() {
     timelineScrollArea.innerHTML = html;
 }
 
+// zooming
+function zoomToCountry(element) {
+    // get the bounding box of the SVG path
+    const bbox = element.getBBox();
+    // center
+    const cx = bbox.x + (bbox.width / 2);
+    const cy = bbox.y + (bbox.height / 2);
+
+    const targetScale = 2.5; 
+
+    // dimensions
+    const containerWidth = mapContainer.parentElement.offsetWidth; // use parent
+    const containerHeight = mapContainer.parentElement.offsetHeight;
+
+    // calculate translation to center the point
+    // formula: (ScreenCenter) - (Point * Scale)
+    
+    currentScale = targetScale;
+    
+    currentTranslateX = (containerWidth / 2) - (cx * currentScale);
+    currentTranslateY = (containerHeight / 2) - (cy * currentScale);
+    
+    updateTransform();
+}
+
 window.triggerCountryClick = function(countryKey) {
     let target = document.getElementById(countryKey) || document.querySelector(`path[name="${countryKey}"]`) || document.querySelector(`path.${countryKey}`);
-    if (target) handleCountryClick({ target: target, tagName: "path" });
+    
+    if (target) {
+        document.querySelectorAll('.active-highlight').forEach(el => el.classList.remove('active-highlight'));
+        target.classList.add('active-highlight');
+        zoomToCountry(target);
+    }
 };
 
 // Map Drag & Zoom
@@ -96,7 +131,11 @@ let currentScale = 1, currentTranslateX = 0, currentTranslateY = 0;
 let isDragging = false, startX = 0, startY = 0, initialTranslateX = 0, initialTranslateY = 0, hasMoved = false;
 const zoomTarget = mapContainer; const maxZoom = 4; const minZoom = 1;
 
-function updateTransform() { zoomTarget.style.transform = `translate(${currentTranslateX}px, ${currentTranslateY}px) scale(${currentScale})`; zoomValueOutput.innerText = Math.round(currentScale * 100) + "%"; }
+function updateTransform() {
+    zoomTarget.style.transform = `translate(${currentTranslateX}px, ${currentTranslateY}px) scale(${currentScale})`;
+    zoomValueOutput.innerText = Math.round(currentScale * 100) + "%";
+    zoomTarget.style.transformOrigin = "0 0";
+}
 
 mapContainer.addEventListener("mousedown", (e) => { if(e.button !== 0) return; isDragging = true; hasMoved = false; startX = e.clientX; startY = e.clientY; initialTranslateX = currentTranslateX; initialTranslateY = currentTranslateY; mapContainer.classList.add("grabbing"); });
 window.addEventListener("mousemove", (e) => { if (!isDragging) return; const dx = e.clientX - startX; const dy = e.clientY - startY; if (Math.abs(dx) > 5 || Math.abs(dy) > 5) hasMoved = true; currentTranslateX = initialTranslateX + dx; currentTranslateY = initialTranslateY + dy; updateTransform(); });
