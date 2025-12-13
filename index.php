@@ -97,6 +97,18 @@
         </div>
     </div>
 
+    <div id="countryModal" class="modal">
+        <div class="modal-backdrop"></div>
+        <div class="vintage-paper-modal" style="min-height: 600px;">
+            <button class="modal-close-wax" onclick="closeCountryModal()">&times;</button>
+            <div class="paper-content" id="countryContent">
+                <div class="loading-spinner">
+                    <h2 class="vintage-subtitle">Opening archives...</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="world-map">
         <div class="map-container">
             <?php include 'world-map.php'; ?>
@@ -119,7 +131,7 @@
             </div>
         </div>
         <button class="close-btn"><i class="fas fa-times"></i></button>
-        <h2 class="loading">Consulting the archives...</h2>
+        <h2 class="loading">Saan kaya pumunta si Rizal?</h2>
     </div>
 
     <div class="timeline-bar">

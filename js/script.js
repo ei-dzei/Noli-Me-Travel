@@ -29,6 +29,28 @@ const rizalTravels = [
   { countryKey: "ES", title: "Spain", location: "Barcelona", month: "June", date: "June 16, 1882", story: "Rizal reached Barcelona and later Madrid to study." }
 ];
 
+const countryMap = {
+    "PH": "philippines.php",
+    "Philippines": "philippines.php",
+    "SG": "singapore.php",
+    "Singapore": "singapore.php",
+    "CL": "ceylon.php", // Sri Lanka
+    "Ceylon": "ceylon.php",
+    "EG": "egypt.php",
+    "Egypt": "egypt.php",
+    "IT": "italy.php",
+    "Italy": "italy.php",
+    "FR": "france.php",
+    "France": "france.php",
+    "ES": "spain.php",
+    "Spain": "spain.php",
+    "AD": "aden.php", // Yemen
+    "Aden": "aden.php",
+    "SO": "somalia.php",
+    "Somalia": "somalia.php"
+};
+
+
 // --- LOGIC ---
 function getCountryIdentifier(element) {
     if (element.hasAttribute("id")) return element.getAttribute("id");
@@ -83,29 +105,49 @@ window.addEventListener("mouseup", () => { isDragging = false; mapContainer.clas
 // Click Handler
 function handleCountryClick(e) {
     if (hasMoved && e.tagName !== "path") return;
-    let target = e.target.tagName !== "path" && e.tagName === "path" ? e.target : e.target;
-    if (target.tagName !== "path") return;
+
+    let target = e.target;
+    if (e.target.tagName !== "path" && e.tagName === "path") target = e.target;
     const clickedID = getCountryIdentifier(target);
     if (!clickedID) return;
 
-    timelineBar.classList.remove("timeline-open");
-    sidePanel.classList.add("side-panel-open");
-    container.classList.add("hide");
-    loading.classList.remove("hide");
-    
-    const result = rizalTravels.find(item => clickedID.toLowerCase().includes(item.countryKey.toLowerCase()));
-    
-    setTimeout(() => {
-        if (result) {
-            countryNameOutput.innerText = result.title;
-            dateOutput.innerText = result.date;
-            locationOutput.innerText = result.location;
-            storyOutput.innerHTML = result.story;
-            container.classList.remove("hide"); loading.classList.add("hide");
-        } else {
-            loading.innerText = "Rizal did not stop here.";
-        }
-    }, 300);
+    console.log("Clicked:", clickedID);
+    const phpFileName = countryMap[clickedID] || countryMap[clickedID.replace(/\s+/g, '')];
+
+    if (phpFileName) {
+        // --- VISITED COUNTRY ---
+
+        sidePanel.classList.remove("side-panel-open");
+        
+        const modal = document.getElementById("countryModal");
+        const contentDiv = document.getElementById("countryContent");
+        
+        modal.classList.add("active");
+        contentDiv.innerHTML = '<h2 class="vintage-subtitle" style="text-align:center; margin-top:20%;">Opening archives...</h2>';
+
+        fetch(`countries/${phpFileName}`)
+            .then(response => {
+                if (!response.ok) throw new Error("Network response was not ok");
+                return response.text();
+            })
+            .then(html => {
+                contentDiv.innerHTML = html;
+            })
+            .catch(error => {
+                contentDiv.innerHTML = `<h2 class="vintage-subtitle">Error loading document.</h2><p>${error.message}</p>`;
+            });
+
+    } else {
+        // --- NOT VISITED ---
+        document.getElementById("countryModal").classList.remove("active");
+
+        timelineBar.classList.remove("timeline-open");
+        sidePanel.classList.add("side-panel-open");
+        container.classList.add("hide");
+        loading.classList.remove("hide");
+
+        loading.innerText = "Rizal did not stop here on his first voyage.";
+    }
 }
 mapContainer.addEventListener("click", handleCountryClick);
 
@@ -117,10 +159,27 @@ zoomOutBtn.addEventListener("click", () => { if (currentScale > minZoom) { curre
 
 // Modal
 let currentPage = 1;
-function openAbout() { document.getElementById("aboutModal").classList.add("active"); }
-function closeAbout() { document.getElementById("aboutModal").classList.remove("active"); }
-function closeWelcome() { document.getElementById("welcomeModal").classList.remove("active"); setTimeout(() => timelineBar.classList.add("timeline-open"), 500); }
-function nextPage() { document.querySelector(`.book-page[data-page="1"]`).classList.remove("active"); document.querySelector(`.book-page[data-page="2"]`).classList.add("active"); }
-function prevPage() { document.querySelector(`.book-page[data-page="2"]`).classList.remove("active"); document.querySelector(`.book-page[data-page="1"]`).classList.add("active"); }
+function openAbout() {
+    document.getElementById("aboutModal").classList.add("active");
+}
+function closeAbout() {
+    document.getElementById("aboutModal").classList.remove("active");
+}
+function closeWelcome() {
+    document.getElementById("welcomeModal").classList.remove("active");
+    setTimeout(() => timelineBar.classList.add("timeline-open"), 500);
+}
+function nextPage() {
+    document.querySelector(`.book-page[data-page="1"]`).classList.remove("active");
+    document.querySelector(`.book-page[data-page="2"]`).classList.add("active");
+}
+function prevPage() {
+    document.querySelector(`.book-page[data-page="2"]`).classList.remove("active");
+    document.querySelector(`.book-page[data-page="1"]`).classList.add("active");
+}
 
 window.addEventListener('DOMContentLoaded', () => { highlightVisitedCountries(); generateTimeline(); updateTransform(); });
+
+function closeCountryModal() {
+    document.getElementById("countryModal").classList.remove("active");
+}
