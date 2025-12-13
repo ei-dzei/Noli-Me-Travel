@@ -1,8 +1,8 @@
 <div>
-    <h2> Philippines - Departure </h4>
+    <h2> Philippines - Departure </h2>
     <h3>May 3, 1882 <br>
         Manila, Philippines
-    </h5>
+    </h3>
     <p>
       
 Rizal secretly leaves the Philippines for the first time on the Spanish steamer Salvadora, bound for Singapore, traveling under the name “Jose Mercado” to avoid suspicion from Spanish authorities and friars.
