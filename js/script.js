@@ -221,3 +221,8 @@ window.addEventListener('DOMContentLoaded', () => { highlightVisitedCountries();
 function closeCountryModal() {
     document.getElementById("countryModal").classList.remove("active");
 }
+
+function toggleTimeline() {
+    const timelineBar = document.querySelector(".timeline-bar");
+    timelineBar.classList.toggle("timeline-open");
+}

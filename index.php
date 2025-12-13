@@ -23,6 +23,13 @@
         <div class="top-disclaimer">
             <p>PI 100: Life and Works of Rizal &bull; For Educational Purposes Only</p>
         </div>
+
+        <div class="nav-item-wrapper right-corner">
+            <button class="btn-vintage-tag" onclick="toggleTimeline()">
+                <span class="tag-text">Itinerary</span>
+                <span class="tag-sub">Show Timeline</span>
+            </button>
+        </div>
     </div>
 
     <div id="welcomeModal" class="modal active">
