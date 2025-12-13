@@ -68,7 +68,7 @@ path {
 }
 
 path:hover {
-  fill: #c99aff;
+  fill: #4a3a2a;
   cursor: pointer;
   transition: fill 200ms ease;
 }

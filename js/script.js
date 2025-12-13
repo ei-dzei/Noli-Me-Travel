@@ -43,6 +43,9 @@ countries.forEach((country) => {
     });
     //Add click event to each country
     country.addEventListener("click", function(e) {
+        e.preventDefault(); 
+        e.stopPropagation();
+
         //Set loading text
         loading.innerText = "Naliligaw ka. Hindi dumaan si Rizal dito. 😉";
         //Hide country data container
@@ -221,8 +224,14 @@ document.addEventListener("keydown", (e) => {
 })
 
 function closeWelcome() {
-  document.getElementById("welcomeModal").classList.remove("active")
-  currentPage = 1
-  document.querySelectorAll(".book-page").forEach((page) => page.classList.remove("active"))
-  document.querySelector('.book-page[data-page="1"]').classList.add("active")
+  const modal = document.getElementById("welcomeModal");
+  modal.classList.remove("active");
+  
+  setTimeout(() => {
+      modal.style.zIndex = "-1"; 
+  }, 500);
+
+  currentPage = 1;
+  document.querySelectorAll(".book-page").forEach((page) => page.classList.remove("active"));
+  document.querySelector('.book-page[data-page="1"]').classList.add("active");
 }

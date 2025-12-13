@@ -19,7 +19,6 @@
     <div id="welcomeModal" class="modal active">
         <div class="modal-content book-pages">
             <button class="modal-close" onclick="closeWelcome()">&times;</button>
-            
             <!-- Page 1 -->
             <div class="book-page active" data-page="1">
                 <div class="book-wrapper">
