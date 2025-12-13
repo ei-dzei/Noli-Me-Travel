@@ -21,10 +21,6 @@
             </button>
         </div>
 
-        <div class="top-disclaimer">
-            <p>PI 100: Life and Works of Rizal &bull; For Educational Purposes Only</p>
-        </div>
-
         <div class="top-disclaimer tag-text">
             <p>Noli Me Travel</p>
         </div>
@@ -39,8 +35,7 @@
 
     <div id="welcomeModal" class="modal active">
         <div class="modal-backdrop"></div>
-        <div class="vintage-paper-modal">
-                        
+        <div class="vintage-paper-modal">                        
             <div class="book-page active" data-page="1">
                 <div class="paper-content">
                     <h1 class="elegant-title">Welcome to Noli Me Travel</h1>
@@ -111,7 +106,7 @@
 
     <div id="countryModal" class="modal">
         <div class="modal-backdrop"></div>
-        <div class="vintage-paper-modal" style="min-height: 600px;">
+        <div class="vintage-paper-modal">
             <button class="modal-close-wax" onclick="closeCountryModal()">&times;</button>
             <div class="paper-content" id="countryContent">
                 <div class="loading-spinner">

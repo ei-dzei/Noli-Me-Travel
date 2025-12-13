@@ -187,7 +187,7 @@ function handleCountryClick(e) {
                 return response.text();
             })
             .then(html => {
-                contentDiv.innerHTML = html;
+                contentDiv.innerHTML = `<div class="content-wrapper">${html}</div>`;
             })
             .catch(error => {
                 contentDiv.innerHTML = `<h2 class="vintage-subtitle">Error loading document.</h2><p>${error.message}</p>`;
