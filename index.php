@@ -36,20 +36,16 @@
             <img src="./flag.png" class="country-flag">
             <ul>
                 <li>
-                    <strong>Capital City:</strong>
-                    <span class="city"></span>
+                    <strong>Date:</strong>
+                    <span class="date"></span>
                 </li>
                 <li>
-                    <strong>Area:</strong>
-                    <span class="area"></span>
+                    <strong>Location:</strong>
+                    <span class="location"></span>
                 </li>
                 <li>
-                    <strong>Currencies:</strong>
-                    <span class="currencies"></span>
-                </li>
-                <li>
-                    <strong>Languages:</strong>
-                    <span class="languages"></span>
+                    <strong>Story:</strong>
+                    <span class="story"></span>
                 </li>
             </ul>
         </div>
@@ -66,6 +62,6 @@
         <p class="zoom-value">100%</p>
     </div>
     
-    <script src="js/script.js"></script>
+    <script src="js/script_trial.js"></script>
 </body>
 </html>
