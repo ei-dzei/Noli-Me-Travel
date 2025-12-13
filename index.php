@@ -71,7 +71,8 @@
             </div>
         </div>
     </div>
-
+    
+    <!-- how it works -->
     <div id="aboutModal" class="modal">
         <div class="modal-backdrop"></div>
         <div class="vintage-paper-modal">
