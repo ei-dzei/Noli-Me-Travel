@@ -20,16 +20,16 @@
     </div>
 
     <div class="assets-section gallery-row">
-        <div class="gallery-item" onclick="openassetsModal('Château d’If', 'The famous fortress-prison featured in Alexandre Dumas\' novel, The Count of Monte Cristo. Rizal visited this site as a fan of the book.', './assets/france/chateau-dif.png')">
-            <img src="./assets/france/chateau-dif.png" alt="Château d’If">
+        <div class="gallery-item" onclick="openassetsModal('Château d’If', 'The famous fortress-prison featured in Alexandre Dumas\' novel, The Count of Monte Cristo. Rizal visited this site as a fan of the book.', './public/assets/france/chateau-dif.png')">
+            <img src="./public/assets/france/chateau-dif.png" alt="Château d’If">
         </div>
 
-        <div class="gallery-item" onclick="openassetsModal('Port of Marseilles', 'Rizal was impressed by the busy and modern harbor.', './assets/france/marseilles-port.png')">
-            <img src="./assets/france/marseilles-port.png" alt="Port of Marseilles">
+        <div class="gallery-item" onclick="openassetsModal('Port of Marseilles', 'Rizal was impressed by the busy and modern harbor.', './public/assets/france/marseilles-port.png')">
+            <img src="./public/assets/france/marseilles-port.png" alt="Port of Marseilles">
         </div>
 
-        <div class="gallery-item" onclick="openassetsModal('Express Train', 'Rizal took an express train crossing the Pyrenees mountains to reach Barcelona, Spain.', './assets/france/train.png')">
-            <img src="./assets/france/train.png" alt="Train in France">
+        <div class="gallery-item" onclick="openassetsModal('Express Train', 'Rizal took an express train crossing the Pyrenees mountains to reach Barcelona, Spain.', './public/assets/france/train.png')">
+            <img src="./public/assets/france/train.png" alt="Train in France">
         </div>
     </div>
 </div>
