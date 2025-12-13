@@ -3,7 +3,7 @@
         <div class="stamp-ink">
             <span class="stamp-top">VISITED</span>
             <span class="stamp-center">FRANCE</span>
-            <span class="stamp-bottom">JUN 15, 1882</span>
+            <span class="stamp-bottom">June 1882</span>
         </div>
     </div>
 

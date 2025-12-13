@@ -2,8 +2,8 @@
     <div class="passport-stamp-container">
         <div class="stamp-ink">
             <span class="stamp-top">VISITED</span>
-            <span class="stamp-center">SOMALIA</span>
-            <span class="stamp-bottom">Late May 1882</span>
+            <span class="stamp-center">SPAIN</span>
+            <span class="stamp-bottom">June 1882</span>
         </div>
     </div>
 

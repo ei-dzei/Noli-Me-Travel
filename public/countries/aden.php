@@ -3,12 +3,12 @@
         <div class="stamp-ink">
             <span class="stamp-top">VISITED</span>
             <span class="stamp-center">ADEN</span>
-            <span class="stamp-bottom">Late May, 1882</span>
+            <span class="stamp-bottom">Late May 1882</span>
         </div>
     </div>
 
     <h1 class="elegant-title">Aden (Yemen)</h1>
-    <h2 class="vintage-subtitle">Late May, 1882</h2>
+    <h2 class="vintage-subtitle">Late May 1882</h2>
     <h2 class="vintage-subtitle">British Aden (Yemen)</h2>
 
     <div class="text-columns single-col">
