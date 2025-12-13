@@ -14,7 +14,6 @@
     <title>Noli Me Travel: Rizal's Voyage</title>
 </head>
 <body>
-
     <!--Welcome-->
     <div id="welcomeModal" class="modal active">
         <div class="modal-content book-pages">
@@ -24,9 +23,7 @@
                 <div class="book-wrapper">
                     <h1>Welcome to Noli Me Travel!</h1>
                     <h2>Rizal's Voyage from the Philippines to Spain</h2>
-                    
-                    <!-- Combined both first and second paragraphs into one modal-body for two-column layout -->
-                    <div class="modal-body">
+                                        <div class="modal-body">
                         <p>
                             Jose Protasio Rizal Mercado y Alonso Realonda was born on June 19, 1861, in Calamba, Laguna, into an educated and deeply religious family that deeply valued learning. Since childhood, he has shown remarkable talent in reading, writing, and the arts. He excelled in his studies at the Ateneo Municipal and the University of Santo Tomas (UST), but he also encountered discrimination, intellectual frustration, and the harsh realities of the Spanish colonial rule that shaped his sense of injustice and his desire to understand the wider world.
                         </p>
@@ -45,11 +42,12 @@
             <div class="book-page" data-page="2">
                 <div class="book-wrapper">
                     <h1>Welcome to Noli Me Travel!</h1>
-                    <!-- Only third paragraph on page 2 spread across two columns -->
                     <div class="modal-body">
                         <p>
                             Rizal's voyage from the Philippines to Spain was a major turning point. As he passed through different foreign ports and finally reached the liberal atmosphere of Barcelona and Madrid, he encountered new political ideas, scientific thinking, and a freer public life that deepened his understanding of liberty, rights, and national dignity. The journey you are about to embark reveals his experiences, observations, and studies that converged into the critical vision that would later influence his writings and beliefs that helped shape the sense of Filipino nationhood ignited during his time that continues to this day. 
                         </p>
+
+                        <p>This website was created as a course requirement for <strong>PI 100: Life and Works of Rizal</strong>.</p>
                     </div>
                     
                     <button class="btn-primary" onclick="closeWelcome()">Begin the Journey</button>
@@ -136,8 +134,7 @@
         <button class="zoom-in">+</button>
         <button class="zoom-out">-</button>
         <p class="zoom-value">100%</p>
-    </div>
-    
+    </div>    
     <script src="js/script.js"></script>
 </body>
 </html>
