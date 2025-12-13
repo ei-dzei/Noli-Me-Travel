@@ -141,9 +141,6 @@
         <div class="journal-texture"></div>
         <div class="container">
             <h1 class="country-name">Philippines</h1>
-            <div class="photo-slot">
-                <img src="./flag.png" class="country-flag" style="display:none;">
-            </div>
             <div class="handwritten-notes">
                 <p><strong>Date:</strong> <span class="date"></span></p>
                 <p><strong>Location:</strong> <span class="location"></span></p>

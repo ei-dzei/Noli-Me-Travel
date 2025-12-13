@@ -351,22 +351,20 @@ path:hover {
 
 .side-panel {
     position: fixed;
-
     top: 50%; 
     transform: translateY(-50%);
     
     height: 85vh;
-    max-height: 800px;
-    
-    right: -40em; 
+    max-height: 700px;
     width: 350px;
+    
+    right: -400px;
     
     background: #fdfbf7;
     z-index: 200;
     
     border: 12px solid #3e2723; 
-
-    border-radius: 15px 0 0 15px; 
+    border-radius: 15px 0 0 15px;
     
     box-shadow: -5px 5px 20px rgba(0,0,0,0.4);
     transition: right 0.5s cubic-bezier(0.77, 0, 0.18, 1);
@@ -375,16 +373,23 @@ path:hover {
     flex-direction: column;
 }
 
+/* Open State */
 .side-panel.side-panel-open {
     right: 0;
-    left: auto;
 }
 
 .side-panel .container {
     padding: 30px;
-    height: 100%;
-    overflow-y: auto;
-    background-image: repeating-linear-gradient(#fdfbf7 0px, #fdfbf7 29px, #e0e0e0 30px);
+    
+    flex: 1; 
+    
+    overflow-y: auto; 
+    
+    scrollbar-width: none; 
+}
+
+.side-panel .container::-webkit-scrollbar {
+    display: none;
 }
 
 .country-name {
