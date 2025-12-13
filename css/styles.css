@@ -294,9 +294,6 @@ path:hover {
     cursor: pointer;
 }
 
-path.visited-country {
-    fill: #5d4037;
-}
 
 .side-panel {
     position: fixed;
