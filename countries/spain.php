@@ -4,6 +4,10 @@
     <div class="text-columns single-col">
             <span class="drop-cap">O</span>
 <p>
-
+<ul>
+    <li>
+        On the afternoon of June 15, 1882, Rizal left Marseille by train.
+    </li>
+</ul>
 </p>
 </div>
