@@ -13,7 +13,7 @@
     <div class="text-columns single-col">
         <p>
             <span class="drop-cap">D</span>
-            During the voyage to Singapore, there were sixteen passengers including Rizal. There were five or six ladies, many children, and the rest were gentlemen. He was the only Filipino, others were Spaniards, British, and Indian Negroes.
+            uring the voyage to Singapore, there were sixteen passengers including Rizal. There were five or six ladies, many children, and the rest were gentlemen. He was the only Filipino, others were Spaniards, British, and Indian Negroes.
             The ship captain, Donato Lecha from Asturias, Spain, befriended Rizal, whom he described as an affable man. However, he was peeved by some Spaniards who spoke ill of the Philippines.
             To relieve his boredom, Rizal played chess with older passengers and won many times as he was a good chess player.
             On May 8, 1882, while the steamer was approaching Singapore, Rizal saw a beautiful island that reminded him of “Talim Island with the Susong Dalaga”.
