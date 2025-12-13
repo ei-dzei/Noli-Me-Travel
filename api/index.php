@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="../public/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Pinyon+Script&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+    <script src="<?=$_ENV['FONT_AWESOME'];?>"></script>
     <title>Noli Me Travel: Rizal's Voyage</title>
 </head>
 <body>
@@ -168,6 +169,6 @@
         <p class="zoom-value">100%</p>
     </div>
     
-    <script src="js/script.js"></script>
+    <script src="../public/js/script.js"></script>
 </body>
 </html>
