@@ -201,10 +201,9 @@ function handleCountryClick(e) {
         
         loading.classList.remove("hide");
 
-        // --- CHECK FOR BRAZIL EASTER EGG ---
+        // --- CHECK FOR EASTER EGG ---
         if (clickedID === "BR") {
             loading.style.marginTop = "10%";
-            
             loading.innerHTML = `
                 <h2 style="font-family: var(--font-script); color: #3e2723; font-size: 2.5rem; margin-bottom: 15px;">
                     You found an Easter Egg!
@@ -218,18 +217,16 @@ function handleCountryClick(e) {
                     While Rizal didn't stop here in 1882, you've discovered a secret location on the map!
                 </p>
             `;
-            
         }
-        if (clickedID === "HK") {
+        else if (clickedID === "HK") {
             loading.style.marginTop = "10%";
-            
             loading.innerHTML = `
                 <h2 style="font-family: var(--font-script); color: #3e2723; font-size: 2.5rem; margin-bottom: 15px;">
                     You found an Easter Egg!
                 </h2>
                 
                 <div class="photo-slot" style="transform: rotate(-2deg); width: 260px; height: auto; padding: 10px; margin: 0 auto;">
-                    <img src="../public/assets/rizal-bracken.png" style="width: 100%; display: block;" alt="Brazil Secret">
+                    <img src="../public/assets/rizal-bracken.png" style="width: 100%; display: block;" alt="Hongkong Secret">
                 </div>
             `;
         }
