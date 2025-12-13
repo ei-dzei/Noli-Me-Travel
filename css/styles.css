@@ -560,6 +560,25 @@ path:hover {
     transform: rotate(-1deg);
 }
 
+#countryContent .gallery-item img {
+    transform: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+#countryContent .gallery-item {
+    background: transparent;
+}
+
+
 .active-highlight {
     fill: #d7ccc8 !important;
     stroke: var(--gold-accent) !important;
@@ -603,13 +622,16 @@ g.active-highlight path {
 .gallery-row {
     display: flex;
     width: 100%;
-    margin-top: 30px;
-    gap: 0;
+    margin-top: 35px;
+    gap: 10px;
+    justify-content: space-between;
+    
+    overflow: visible; 
 }
 
 .gallery-item {
     flex: 1;
-    height: 180px;
+    height: 200px;
     cursor: pointer;
     position: relative;
     margin: 0;
@@ -619,12 +641,8 @@ g.active-highlight path {
 .gallery-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain; 
     display: block;
-}
-
-.gallery-item:not(:last-child) {
-    border-right: 1px solid rgba(255,255,255,0.2);
 }
 
 /* --- ANIMATED PASSPORT STAMP --- */

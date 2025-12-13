@@ -24,6 +24,10 @@
             <p>PI 100: Life and Works of Rizal &bull; For Educational Purposes Only</p>
         </div>
 
+        <div class="top-disclaimer tag-text">
+            <p>Noli Me Travel</p>
+        </div>
+
         <div class="nav-item-wrapper right-corner">
             <button class="btn-vintage-tag" onclick="toggleTimeline()">
                 <span class="tag-text">Itinerary</span>
