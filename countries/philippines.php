@@ -1,9 +1,10 @@
-<p>amongus</p>
 <div>
+    <h4> Philippines - Departure </h4>
+    <h5>May 3, 1882 <br>
+        Manila, Philippines
+    </h5>
     <p>
-       Philippines - Departure
-May 3, 1882 
-Manila, Philippines
+      
 Rizal secretly leaves the Philippines for the first time on the Spanish steamer Salvadora, bound for Singapore, traveling under the name “Jose Mercado” to avoid suspicion from Spanish authorities and friars.
 His “secret mission” is to study in Spain, observe European societies, and prepare himself intellectually to work for reforms in the Philippines.
 Before his departure, he wrote a farewell letter for his beloved parents and sweetheart Leonor Rivera. 
