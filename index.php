@@ -28,8 +28,7 @@
     <div id="welcomeModal" class="modal active">
         <div class="modal-backdrop"></div>
         <div class="vintage-paper-modal">
-            <button class="modal-close-wax" onclick="closeWelcome()">&times;</button>
-            
+                       
             <div class="book-page active" data-page="1">
                 <div class="paper-content">
                     <h1 class="elegant-title">Welcome to Noli Me Travel</h1>
