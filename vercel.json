@@ -3,9 +3,6 @@
     "api/*.php": { "runtime": "vercel-php@0.7.1" }
   },
   "rewrites": [
-    {
-      "source": "/((?!api|styles|scripts|images|favicon.ico).*)",
-      "destination": "/api/index.php"
-    }
+    { "source": "/(.*)", "destination": "/api/index.php" }
   ]
 }
