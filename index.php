@@ -76,7 +76,7 @@
                         This project was developed by the group of Gabryelle Doreen Amador, Duncan Red Benedict De Guzman, Angeline Joy Miguel, and Jessica Bea Novesteras as a course requirement for the subject PI 100: Life and Works of Rizal.
                     </p>
                     <p>
-                        Each country on Rizal's route is marked with clickable elements you are to discover, containing historical information, facts, and anecdotes linked to that specific stopover. A timeline displays the proper order of his travels, helping the users to maintain chronology while freely exploring the map. Books by <a href="https://www.researchgate.net/publication/360619128_The_First_Filipino_by_Leon_Ma_Guerrero_1974">Guerrero</a> and Zaide are used as references for this project.
+                        Each country on Rizal's route is marked with clickable elements you are to discover, containing historical information, facts, and anecdotes linked to that specific stopover. A timeline displays the proper order of his travels, helping the users to maintain chronology while freely exploring the map. Books by <a target="_blank" href="https://www.researchgate.net/publication/360619128_The_First_Filipino_by_Leon_Ma_Guerrero_1974">Guerrero</a> and Zaide are used as references for this project.
                     </p>
                     <p>
                         After closing this card, glide across Rizal's world with your mouse or trackpad. Click, drag, and zoom around to open moments in his first travel, and trace the beginnings of his intellectual awakening. Look out for an easter egg! 

@@ -37,18 +37,30 @@ body {
   width: 100vw;
 }
 
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
 .world-map {
+  width: 100vw;
+  height: 100vh;
   position: absolute;
   top: 0;
   left: 0;
-  width: max-content;
-  height: max-content;
-  min-height: 30em;
-  background-color: #fdf5e6; 
+  
+  overflow: auto; 
+  
   display: flex;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+  
+  cursor: grab;
   z-index: 0;
+}
+
+.world-map:active {
+  cursor: grabbing;
 }
 
 svg {
@@ -80,6 +92,30 @@ path:hover {
   
   position: relative;
   z-index: 10;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #3d2f1f;
+  border-left: 1px solid #5c4033;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8b5a2b;
+  border: 2px solid #3d2f1f;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d2a679;
+}
+
+::-webkit-scrollbar-corner {
+  background: #3d2f1f;
 }
 
 .side-panel {
@@ -214,8 +250,8 @@ path:hover {
   bottom: 2em;
   left: 2em;
   padding: 0.8em 1.5em;
-  background: #d4c4a8;
-  color: #1d1a20;
+  background: #4a3a2a;
+  color: #f4e8d8;
   border: none;
   border-radius: 25px;
   font-family: var(--font-body);
@@ -231,9 +267,9 @@ path:hover {
 }
 
 .btn-about:hover {
-  background: #d4c4a8;
+  background: #4a3a2a;
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(225, 210, 161, 0.6);
+  box-shadow: 0 6px 16px rgba(183, 163, 97, 0.6);
 }
 
 .btn-about i {
