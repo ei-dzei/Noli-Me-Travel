@@ -1,4 +1,12 @@
 <div class="journal-entry">
+    <div class="passport-stamp-container">
+        <div class="stamp-ink">
+            <span class="stamp-top">VISITED</span>
+            <span class="stamp-center">PHILIPPINES</span>
+            <span class="stamp-bottom">May 1882</span>
+        </div>
+    </div>
+
     <h1 class="elegant-title">Philippines</h1>
     <h2 class="vintage-subtitle">May 3, 1882</h2>
     <h2 class="vintage-subtitle">Port of Manila, Philippines</h2>
@@ -12,5 +20,15 @@
             His departure was only known by his brother Paciano, his uncle Antonio Rivera, his sisters Neneng and Lucia, the Valenzuela family, Pedro A. Paterno, his compadre Mateo Evangelista, the Ateneo Jesuit fathers, and some intimate friends, including Chengoy or Jose M. Cecilio. </br> </br>
             The Jesuit priests gave him letters of recommendation to the members of their Society in Barcelona.
         </p>
+    </div>
+
+    <div class="assets-section gallery-row">
+        <div class="gallery-item" onclick="openassetsModal('Port of Manila', '', '../public/assets/philippines/port.png')">
+            <img src="../public/assets/philippines/port.png" alt="Port of Manila">
+        </div>
+
+        <div class="gallery-item" onclick="openassetsModal('Salvadora Steamer', 'Rizal secretly leaves the Philippines for the first time on the Spanish steamer Salvadora, bound for Singapore.', '../public/assets/philippines/salvadora.png')">
+            <img src="../public/assets/philippines/salvadora.png" alt="Salvadora Steamer">
+        </div>
     </div>
 </div>
