@@ -116,7 +116,6 @@ function handleCountryClick(e) {
 
     if (phpFileName) {
         // --- VISITED COUNTRY ---
-
         sidePanel.classList.remove("side-panel-open");
         
         const modal = document.getElementById("countryModal");
