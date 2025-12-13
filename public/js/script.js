@@ -178,9 +178,6 @@ function handleCountryClick(e) {
         modal.classList.add("active");
         contentDiv.innerHTML = '<h2 class="vintage-subtitle" style="text-align:center; margin-top:20%;">Opening archives...</h2>';
 
-        // --- FIXED PATH HERE ---
-        // Was: `countries/${phpFileName}`
-        // Now: Go up from api (..) then into public/countries/
         fetch(`../public/countries/${phpFileName}`)
             .then(response => {
                 if (!response.ok) throw new Error("Network response was not ok");
@@ -194,15 +191,52 @@ function handleCountryClick(e) {
             });
 
     } else {
-        // --- NOT VISITED ---
+        // --- NOT VISITED & EASTER EGG ---
         document.getElementById("countryModal").classList.remove("active");
 
         timelineBar.classList.remove("timeline-open");
         sidePanel.classList.add("side-panel-open");
+        
         container.classList.add("hide");
+        
         loading.classList.remove("hide");
 
-        loading.innerText = "Rizal did not stop here on his first voyage.";
+        // --- CHECK FOR BRAZIL EASTER EGG ---
+        if (clickedID === "BR") {
+            loading.style.marginTop = "10%";
+            
+            loading.innerHTML = `
+                <h2 style="font-family: var(--font-script); color: #3e2723; font-size: 2.5rem; margin-bottom: 15px;">
+                    You found an Easter Egg!
+                </h2>
+                
+                <div class="photo-slot" style="transform: rotate(-2deg); width: 260px; height: auto; padding: 10px; margin: 0 auto;">
+                    <img src="../public/assets/balut.jpg" style="width: 100%; display: block;" alt="Brazil Secret">
+                </div>
+
+                <p style="font-family: var(--font-body); font-size: 0.9rem; margin-top: 20px; line-height: 1.6;">
+                    While Rizal didn't stop here in 1882, you've discovered a secret location on the map!
+                </p>
+            `;
+            
+        }
+        if (clickedID === "HK") {
+            loading.style.marginTop = "10%";
+            
+            loading.innerHTML = `
+                <h2 style="font-family: var(--font-script); color: #3e2723; font-size: 2.5rem; margin-bottom: 15px;">
+                    You found an Easter Egg!
+                </h2>
+                
+                <div class="photo-slot" style="transform: rotate(-2deg); width: 260px; height: auto; padding: 10px; margin: 0 auto;">
+                    <img src="../public/assets/rizal-bracken.png" style="width: 100%; display: block;" alt="Brazil Secret">
+                </div>
+            `;
+        }
+        else {
+            loading.style.marginTop = "50%";
+            loading.innerText = "Rizal did not stop here on his first voyage.";
+        }
     }
 }
 mapContainer.addEventListener("click", handleCountryClick);
