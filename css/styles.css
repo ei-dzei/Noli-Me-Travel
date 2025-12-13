@@ -24,6 +24,11 @@ body {
     width: 100vw;
 }
 
+a {
+    color: var(--ink-color);
+    text-decoration: underline;
+}
+
 /* --- TOP UI (BUTTON & DISCLAIMER) --- */
 .top-ui-layer {
     position: fixed; top: 0; left: 0; width: 100%;

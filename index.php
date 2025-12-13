@@ -79,8 +79,19 @@
             <div class="paper-content">
                 <h1 class="elegant-title">About the Project</h1>
                 <div class="text-columns single-col">
-                    <p>This interactive map invites users to retrace Jose Rizal's first voyage from the Philippines to Spain (1882) through a hand-drawn 2D world.</p>
-                    <p><strong>Developed by:</strong><br> Gabryelle Doreen Amador, Duncan Red Benedict De Guzman, Angeline Joy Miguel, and Jessica Bea Novesteras.</p>
+                    <p>
+                        This is an interactive map that invites users to retrace Jose Rizal’s first voyage from the Philippines to Spain through a hand-drawn 2D world. Designed as a digital learning space, it turns Rizal’s travel route into an exploratory experience to see where he went, what he encountered, and how those experiences contributed to his growth.
+                    </p>
+                    <p>
+                        Each country on Rizal's route is marked with clickable elements you are to discover, containing historical information, facts, and anecdotes linked to that specific stopover. A timeline displays the proper order of his travels, helping the users to maintain chronology while freely exploring the map.
+                        Books by <a target="_blank" href="https://www.researchgate.net/publication/360619128_The_First_Filipino_by_Leon_Ma_Guerrero_1974">Guerrero</a>
+                        and <a target="_blank" href ="https://l.messenger.com/l.php?u=https%3A%2F%2Fwww.google.com.ph%2Fbooks%2Fedition%2F_%2FS1JwAAAAMAAJ%3Fhl%3Den%26sa%3DX%26ved%3D2ahUKEwj05KKirrqRAxUYna8BHRK_At8Q8fIDegQILBAe&h=AT2BAER5TIoG5oCIH08CfxDGOSwrt1lmIKG7ExsciNkc618P_clxfTJ7oXmUKGRncjnws2FAY_1maBVVDLGYB9wADfuPbn7_nXFHMFZBHq5QL9SztDO-8N7-krEoieU">Zaide</a> are used as references for this project.
+                    </p>
+                    <br>
+                    <p>
+                        <strong>Developed by:</strong>
+                        <br> Gabryelle Doreen Amador, Duncan Red Benedict De Guzman, Angeline Joy Miguel, and Jessica Bea Novesteras.
+                    </p>
                 </div>
             </div>
         </div>
