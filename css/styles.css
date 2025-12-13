@@ -44,7 +44,12 @@ a {
 /* how it fucking works */
 .nav-item-wrapper {
     position: absolute; top: 20px; left: 30px; pointer-events: auto;
-    filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.3)); /* Shadow for the paper */
+    filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.3));
+}
+
+.nav-item-wrapper.right-corner {
+    left: auto;
+    right: 30px;
 }
 
 .btn-vintage-tag {
@@ -386,6 +391,11 @@ path:hover {
     bottom: 0;
 }
 
+.timeline-open ~ .top-ui-layer .right-corner {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
 .timeline-header {
     color: var(--paper-cream);
     font-family: var(--font-serif);
@@ -451,7 +461,7 @@ path:hover {
 /* Controls */
 .zoom-controls {
     position: fixed;
-    top: 100px;
+    top: 150px;
     right: 20px;
     z-index: 90;
 }
