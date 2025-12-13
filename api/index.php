@@ -100,6 +100,10 @@
                         <strong>Developed by:
                         <br> Gabryelle Doreen Amador, Duncan Red Benedict De Guzman,<br> Angeline Joy Miguel, and Jessica Bea Novesteras.</strong>
                     </p>
+                    <br>
+                    <p>
+                        After closing this card, glide across Rizal’s world with your mouse or trackpad. Click, drag, and zoom around to open moments in his first travel, and trace the beginnings of his intellectual awakening. <strong>Look out for an easter egg!</strong> 
+                    </p>
                 </div>
             </div>
         </div>
