@@ -21,7 +21,7 @@
         </div>
 
         <div class="top-disclaimer">
-            <p>PI 100 Project: Life and Works of Rizal &bull; Educational Purpose Only</p>
+            <p>PI 100: Life and Works of Rizal &bull; For Educational Purposes Only</p>
         </div>
     </div>
 
@@ -82,6 +82,7 @@
                     <p>
                         This is an interactive map that invites users to retrace Jose Rizal’s first voyage from the Philippines to Spain through a hand-drawn 2D world. Designed as a digital learning space, it turns Rizal’s travel route into an exploratory experience to see where he went, what he encountered, and how those experiences contributed to his growth.
                     </p>
+                    <br>
                     <p>
                         Each country on Rizal's route is marked with clickable elements you are to discover, containing historical information, facts, and anecdotes linked to that specific stopover. A timeline displays the proper order of his travels, helping the users to maintain chronology while freely exploring the map.
                         Books by <a target="_blank" href="https://www.researchgate.net/publication/360619128_The_First_Filipino_by_Leon_Ma_Guerrero_1974">Guerrero</a>
@@ -89,8 +90,8 @@
                     </p>
                     <br>
                     <p>
-                        <strong>Developed by:</strong>
-                        <br> Gabryelle Doreen Amador, Duncan Red Benedict De Guzman, Angeline Joy Miguel, and Jessica Bea Novesteras.
+                        <strong>Developed by:
+                        <br> Gabryelle Doreen Amador, Duncan Red Benedict De Guzman,<br> Angeline Joy Miguel, and Jessica Bea Novesteras.</strong>
                     </p>
                 </div>
             </div>

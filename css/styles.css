@@ -113,7 +113,7 @@ a {
 
 .vintage-paper-modal {
     position: relative;
-    width: 1200px;
+    width: 900px;
     max-width: 90%;
     min-height: 500px;
     background: #fdfbf7;
@@ -162,13 +162,19 @@ a {
     font-family: var(--font-body);
     line-height: 1.8;
     color: #4e342e;
-    font-size: 1rem;
+    font-size: 0.8rem;
     text-align: justify;
     columns: 2;
     column-gap: 40px;
     column-rule: 1px solid rgba(0,0,0,0.1);
 }
-.text-columns.single-col { columns: 1; text-align: center; max-width: 80%; margin: 0 auto; }
+
+.text-columns.single-col {
+    columns: 1;
+    text-align: center;
+    max-width: 80%;
+    margin: 0 auto;
+}
 
 .drop-cap {
     float: left;
