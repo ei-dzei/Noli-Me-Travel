@@ -6,7 +6,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 
     <title>Noli Me Travel: Rizal’s Voyage</title>
 </head>
@@ -66,6 +66,6 @@
         <p class="zoom-value">100%</p>
     </div>
     
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
