@@ -226,6 +226,7 @@ a {
     border-bottom: 1px solid transparent;
     transition: all 0.3s;
 }
+
 .ink-btn:hover {
   border-bottom: 1px solid var(--ink-color);
   letter-spacing: 1px;
@@ -242,6 +243,7 @@ a {
     box-shadow: 3px 3px 0px rgba(0,0,0,0.2);
     transition: all 0.2s;
 }
+
 .btn-primary-vintage:hover {
     transform: translateY(-2px);
     box-shadow: 5px 5px 0px rgba(0,0,0,0.1);
@@ -292,10 +294,6 @@ path:hover {
     position: relative;
     z-index: 10;
     cursor: pointer;
-}
-
-path.visited-country {
-    fill: #5d4037;
 }
 
 .side-panel {
