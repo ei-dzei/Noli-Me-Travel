@@ -1,4 +1,7 @@
 {
+    "name": "ei-dzei/Noli-Me-Travel",
+    "description": "Noli Me Travel: Rizal's Voyage from the Philippines to Spain",
+    "type": "project",
     "require": {
         "vlucas/phpdotenv": "^5.5"
     }
