@@ -554,8 +554,32 @@ path:hover {
     display: flex;
     flex-direction: column;
 
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent; 
+    transition: scrollbar-color 0.3s ease;
+}
+
+#countryContent:hover {
+    scrollbar-color: rgba(184, 134, 11, 0.5) transparent;
+}
+
+#countryContent::-webkit-scrollbar {
+    width: 6px;
+    background: transparent;
+}
+
+#countryContent::-webkit-scrollbar-thumb {
+    background-color: transparent; 
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#countryContent:hover::-webkit-scrollbar-thumb {
+    background-color: rgba(62, 39, 35, 0.2);
+}
+
+#countryContent::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(184, 134, 11, 1);
 }
 
 #countryContent::-webkit-scrollbar {
@@ -606,26 +630,6 @@ path:hover {
 #countryContent .gallery-item {
     background: transparent;
 }
-
-#countryContent::-webkit-scrollbar {
-    width: 8px;
-}
-
-#countryContent::-webkit-scrollbar-track {
-    background: rgba(62, 39, 35, 0.1);
-    border-radius: 4px;
-}
-
-#countryContent::-webkit-scrollbar-thumb {
-    background: #b8860b;
-    border-radius: 4px;
-    border: 1px solid #3e2723;
-}
-
-#countryContent::-webkit-scrollbar-thumb:hover {
-    background: #8d6e63;
-}
-
 
 .active-highlight {
     fill: #d7ccc8 !important;
