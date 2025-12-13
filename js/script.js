@@ -168,3 +168,61 @@ zoomOutBtn.addEventListener("click", () => {
     //Output zoom value percentage
     zoomValueOutput.innerText = zoomValue + "%";
 });
+
+// closing events
+closeBtn.addEventListener("click", () => {
+  sidePanel.classList.remove("side-panel-open")
+})
+
+function openAbout() {
+  document.getElementById("aboutModal").classList.add("active")
+}
+
+function closeAbout() {
+  document.getElementById("aboutModal").classList.remove("active")
+}
+
+let currentPage = 1
+const totalPages = 3
+
+function nextPage() {
+  if (currentPage < totalPages) {
+    const currentPageEl = document.querySelector(`.book-page[data-page="${currentPage}"]`)
+    currentPage++
+    const nextPageEl = document.querySelector(`.book-page[data-page="${currentPage}"]`)
+
+    currentPageEl.classList.remove("active")
+    nextPageEl.classList.add("active")
+  }
+}
+
+function prevPage() {
+  if (currentPage > 1) {
+    const currentPageEl = document.querySelector(`.book-page[data-page="${currentPage}"]`)
+    currentPage--
+    const prevPageEl = document.querySelector(`.book-page[data-page="${currentPage}"]`)
+
+    currentPageEl.classList.remove("active")
+    prevPageEl.classList.add("active")
+  }
+}
+
+document.addEventListener("keydown", (e) => {
+  const welcomeModal = document.getElementById("welcomeModal")
+  const aboutModal = document.getElementById("aboutModal")
+
+  if (welcomeModal.classList.contains("active") && !aboutModal.classList.contains("active")) {
+    if (e.key === "ArrowRight") {
+      nextPage()
+    } else if (e.key === "ArrowLeft") {
+      prevPage()
+    }
+  }
+})
+
+function closeWelcome() {
+  document.getElementById("welcomeModal").classList.remove("active")
+  currentPage = 1
+  document.querySelectorAll(".book-page").forEach((page) => page.classList.remove("active"))
+  document.querySelector('.book-page[data-page="1"]').classList.add("active")
+}
