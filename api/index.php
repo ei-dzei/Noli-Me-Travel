@@ -93,7 +93,7 @@
                     <p>
                         Each country on Rizal's route is marked with clickable elements you are to discover, containing historical information, facts, and anecdotes linked to that specific stopover. A timeline displays the proper order of his travels, helping the users to maintain chronology while freely exploring the map.
                         Books by <a target="_blank" href="https://www.researchgate.net/publication/360619128_The_First_Filipino_by_Leon_Ma_Guerrero_1974">Guerrero</a>
-                        and <a target="_blank" href ="https://l.messenger.com/l.php?u=https%3A%2F%2Fwww.google.com.ph%2Fbooks%2Fedition%2F_%2FS1JwAAAAMAAJ%3Fhl%3Den%26sa%3DX%26ved%3D2ahUKEwj05KKirrqRAxUYna8BHRK_At8Q8fIDegQILBAe&h=AT2BAER5TIoG5oCIH08CfxDGOSwrt1lmIKG7ExsciNkc618P_clxfTJ7oXmUKGRncjnws2FAY_1maBVVDLGYB9wADfuPbn7_nXFHMFZBHq5QL9SztDO-8N7-krEoieU">Zaide</a> are used as references for this project.
+                        and <a target="_blank" href ="https://www.google.com.ph/books/edition/_/S1JwAAAAMAAJ?hl=en&sa=X&ved=2ahUKEwj05KKirrqRAxUYna8BHRK_At8Q8fIDegQILBAe">Zaide</a> are used as references for this project.
                     </p>
                     <br>
                     <p>
