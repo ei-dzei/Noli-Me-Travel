@@ -143,15 +143,31 @@ window.addEventListener("mouseup", () => { isDragging = false; mapContainer.clas
 
 // Click Handler
 function handleCountryClick(e) {
+    // if dragging dont click
     if (hasMoved && e.tagName !== "path") return;
 
     let target = e.target;
-    if (e.target.tagName !== "path" && e.tagName === "path") target = e.target;
-    const clickedID = getCountryIdentifier(target);
+    
+    if (e.tagName === "path" || e.tagName === "g") {
+        target = e; 
+    }
+
+    let clickedID = getCountryIdentifier(target);
+
+    // if not found, and it's a path, check its PARENT GROUP
+    if (!clickedID && target.tagName === 'path') {
+        const parentGroup = target.closest('g');
+        if (parentGroup) {
+            clickedID = getCountryIdentifier(parentGroup);
+        }
+    }
+
     if (!clickedID) return;
 
     console.log("Clicked:", clickedID);
-    const phpFileName = countryMap[clickedID] || countryMap[clickedID.replace(/\s+/g, '')];
+    
+    const lookupKey = clickedID.replace(/\s+/g, '');
+    const phpFileName = countryMap[clickedID] || countryMap[lookupKey];
 
     if (phpFileName) {
         // --- VISITED COUNTRY ---
