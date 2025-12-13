@@ -37,9 +37,15 @@ countries.forEach((country) => {
     country.addEventListener("mouseout", function() {
         //Remove hovered styles from matching elements
         const classList = [...this.classList].join('.');
-        const selector = '.' + classList;
-        const matchingElements = document.querySelectorAll(selector);
-        matchingElements.forEach(el => el.style.fill = "#443d4b");
+
+        if (classList) {
+            const selector = '.' + classList;
+            const matchingElements = document.querySelectorAll(selector);
+            
+            matchingElements.forEach(el => el.style.fill = ""); 
+        } else {
+            this.style.fill = ""; 
+        }
     });
     //Add click event to each country
     country.addEventListener("click", function(e) {
