@@ -29,16 +29,16 @@
     </div>
 
     <div class="assets-section gallery-row">
-        <div class="gallery-item" onclick="openassetsModal('Colombo Architecture', 'Rizal was enamored by Colombo because of its scenic beauty and elegant buildings. This building is the first permanent post office.', '../public/assets/sri-lanka-ceylon/colombo.png')">
-            <img src="../public/assets/sri-lanka-ceylon/colombo.png" alt="Colombo Architecture">
+        <div class="gallery-item" onclick="openassetsModal('Colombo Architecture', 'Rizal was enamored by Colombo because of its scenic beauty and elegant buildings. This building is the first permanent post office.', '/assets/sri-lanka-ceylon/colombo.png')">
+            <img src="/assets/sri-lanka-ceylon/colombo.png" alt="Colombo Architecture">
         </div>
 
-        <div class="gallery-item" onclick="openassetsModal('Colombo Architecture', 'Rizal was enamored by Colombo because of its scenic beauty and elegant buildings.', '../public/assets/sri-lanka-ceylon/colombo2.png')">
-            <img src="../public/assets/sri-lanka-ceylon/colombo2.png" alt="Colombo Architecture">
+        <div class="gallery-item" onclick="openassetsModal('Colombo Architecture', 'Rizal was enamored by Colombo because of its scenic beauty and elegant buildings.', '/assets/sri-lanka-ceylon/colombo2.png')">
+            <img src="/assets/sri-lanka-ceylon/colombo2.png" alt="Colombo Architecture">
         </div>
 
-        <div class="gallery-item" onclick="openassetsModal('Point Galle', 'Rizal described the town as picturesque but lonely, quiet, and sad.', '../public/assets/sri-lanka-ceylon/point-galle.png')">
-            <img src="../public/assets/sri-lanka-ceylon/point-galle.png" alt="Point Galle">
+        <div class="gallery-item" onclick="openassetsModal('Point Galle', 'Rizal described the town as picturesque but lonely, quiet, and sad.', '/assets/sri-lanka-ceylon/point-galle.png')">
+            <img src="/assets/sri-lanka-ceylon/point-galle.png" alt="Point Galle">
         </div>
     </div>
 </div>

@@ -19,16 +19,16 @@
     </div>
 
     <div class="assets-section gallery-row">
-        <div class="gallery-item" onclick="openassetsModal('Cape of Guardafui', 'Rizal sighted the barren coast of Africa.', '../public/assets/somalia/shrubs.png')">
-            <img src="../public/assets/somalia/shrubs.png" alt="Cape of Guardafui">
+        <div class="gallery-item" onclick="openassetsModal('Cape of Guardafui', 'Rizal sighted the barren coast of Africa.', '/assets/somalia/shrubs.png')">
+            <img src="/assets/somalia/shrubs.png" alt="Cape of Guardafui">
         </div>
 
-        <div class="gallery-item" onclick="openassetsModal('Cape of Guardafui', 'Rizal sighted the barren coast of Africa.', '../public/assets/somalia/shrubs-and-rocks.png')">
-            <img src="../public/assets/somalia/shrubs-and-rocks.png" alt="Cape of Guardafui">
+        <div class="gallery-item" onclick="openassetsModal('Cape of Guardafui', 'Rizal sighted the barren coast of Africa.', '/assets/somalia/shrubs-and-rocks.png')">
+            <img src="/assets/somalia/shrubs-and-rocks.png" alt="Cape of Guardafui">
         </div>
 
-        <div class="gallery-item" onclick="openassetsModal('Cape of Guardafui', 'Rizal sighted the barren coast of Africa.', '../public/assets/somalia/rocks.png')">
-            <img src="../public/assets/somalia/rocks.png" alt="Cape of Guardafui">
+        <div class="gallery-item" onclick="openassetsModal('Cape of Guardafui', 'Rizal sighted the barren coast of Africa.', '/assets/somalia/rocks.png')">
+            <img src="/assets/somalia/rocks.png" alt="Cape of Guardafui">
         </div>
     </div>
 </div>

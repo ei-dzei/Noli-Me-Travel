@@ -20,16 +20,16 @@
     </div>
 
     <div class="assets-section gallery-row">
-        <div class="gallery-item" onclick="openassetsModal('Castle of St. Telmo', 'Rizal was captivated by the beauty of the Castle of St. Telmo', '../public/assets/italy/castle-st-elmo.png')">
-            <img src="../public/assets/italy/castle-st-elmo.png" alt="Castle of St. Telmo">
+        <div class="gallery-item" onclick="openassetsModal('Castle of St. Telmo', 'Rizal was captivated by the beauty of the Castle of St. Telmo', '/assets/italy/castle-st-elmo.png')">
+            <img src="/assets/italy/castle-st-elmo.png" alt="Castle of St. Telmo">
         </div>
 
-        <div class="gallery-item" onclick="openassetsModal('Mount Vesuvius', 'Rizal was captivated by the beauty of the Mount Vesuvius', '../public/assets/italy/mount-vesuvius.png')">
-            <img src="../public/assets/italy/mount-vesuvius.png" alt="Mount Vesuvius">
+        <div class="gallery-item" onclick="openassetsModal('Mount Vesuvius', 'Rizal was captivated by the beauty of the Mount Vesuvius', '/assets/italy/mount-vesuvius.png')">
+            <img src="/assets/italy/mount-vesuvius.png" alt="Mount Vesuvius">
         </div>
 
-        <div class="gallery-item" onclick="openassetsModal('Naples', 'Rizal reached Naples, which pleased him because of its business activity, lively people, and its panoramic beauty.', '../public/assets/italy/naples-city.png')">
-            <img src="../public/assets/italy/naples-city.png" alt="Naples, Italy">
+        <div class="gallery-item" onclick="openassetsModal('Naples', 'Rizal reached Naples, which pleased him because of its business activity, lively people, and its panoramic beauty.', '/assets/italy/naples-city.png')">
+            <img src="/assets/italy/naples-city.png" alt="Naples, Italy">
         </div>
     </div>
 

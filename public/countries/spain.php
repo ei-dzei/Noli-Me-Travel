@@ -24,20 +24,20 @@
     </div>
 
     <div class="assets-section gallery-row">
-        <div class="gallery-item" onclick="openassetsModal('Port Bou', 'Rizal stopped for a day at the frontier town of Port Bou, where he noticed the indifference of Spanish immigration officers to tourists, unlike the French immigration officers.', '../public/assets/spain/port-bou.png')">
-            <img src="../public/assets/spain/port-bou.png" alt="Port Bou">
+        <div class="gallery-item" onclick="openassetsModal('Port Bou', 'Rizal stopped for a day at the frontier town of Port Bou, where he noticed the indifference of Spanish immigration officers to tourists, unlike the French immigration officers.', '/assets/spain/port-bou.png')">
+            <img src="/assets/spain/port-bou.png" alt="Port Bou">
         </div>
 
-        <div class="gallery-item" onclick="openassetsModal('Barcelona City', 'Rizal’s first impression of Barcelona, the greatest city of Cataluña and Spain’s second largest city, was ugly and dirty due to the little inns and inhospitable residents.', '../public/assets/spain/barcelona.png')">
-            <img src="../public/assets/spain/barcelona.png" alt="Barcelona City">
+        <div class="gallery-item" onclick="openassetsModal('Barcelona City', 'Rizal’s first impression of Barcelona, the greatest city of Cataluña and Spain’s second largest city, was ugly and dirty due to the little inns and inhospitable residents.', '/assets/spain/barcelona.png')">
+            <img src="/assets/spain/barcelona.png" alt="Barcelona City">
         </div>
 
-        <div class="gallery-item" onclick="openassetsModal('Las Ramblas', 'Rizal enjoyed promenading along Las Ramblas, the most famous street in Barcelona.', '../public/assets/spain/las-ramblas.png')">
-            <img src="../public/assets/spain/las-ramblas.png" alt="Las Ramblas">
+        <div class="gallery-item" onclick="openassetsModal('Las Ramblas', 'Rizal enjoyed promenading along Las Ramblas, the most famous street in Barcelona.', '/assets/spain/las-ramblas.png')">
+            <img src="/assets/spain/las-ramblas.png" alt="Las Ramblas">
         </div>
 
-        <div class="gallery-item" onclick="openassetsModal('Cafe in Plaza de Cataluña', 'Rizal’s schoolmates in Ateneo gave him a party at their favorite cafe in Plaza de Cataluña, where they had an exchange of toasts and told him about the attractions of Barcelona and the customs of the Spanish people.', '../public/assets/spain/cafe.png')">
-            <img src="../public/assets/spain/cafe.png" alt="Cafe in Plaza de Cataluña">
+        <div class="gallery-item" onclick="openassetsModal('Cafe in Plaza de Cataluña', 'Rizal’s schoolmates in Ateneo gave him a party at their favorite cafe in Plaza de Cataluña, where they had an exchange of toasts and told him about the attractions of Barcelona and the customs of the Spanish people.', '/assets/spain/cafe.png')">
+            <img src="/assets/spain/cafe.png" alt="Cafe in Plaza de Cataluña">
         </div>
     </div>
 </div>

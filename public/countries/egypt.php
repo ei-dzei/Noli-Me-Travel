@@ -30,16 +30,16 @@
     </div>
 
     <div class="assets-section gallery-row">
-        <div class="gallery-item" onclick="openassetsModal('Port Said', '', '../public/assets/egypt-suez/port-said.png')">
-            <img src="../public/assets/egypt-suez/port-said.png" alt="Port Said">
+        <div class="gallery-item" onclick="openassetsModal('Port Said', '', '/assets/egypt-suez/port-said.png')">
+            <img src="/assets/egypt-suez/port-said.png" alt="Port Said">
         </div>
 
-        <div class="gallery-item" onclick="openassetsModal('Ship in Suez Canal', '', '../public/assets/egypt-suez/ship.png')">
-            <img src="../public/assets/egypt-suez/ship.png" alt="Ship in Suez Canal">
+        <div class="gallery-item" onclick="openassetsModal('Ship in Suez Canal', '', '/assets/egypt-suez/ship.png')">
+            <img src="/assets/egypt-suez/ship.png" alt="Ship in Suez Canal">
         </div>
 
-        <div class="gallery-item" onclick="openassetsModal('Suez Canal', '', '../public/assets/egypt-suez/suez-canal.png')">
-            <img src="../public/assets/egypt-suez/suez-canal.png" alt="Suez Canal">
+        <div class="gallery-item" onclick="openassetsModal('Suez Canal', '', '/assets/egypt-suez/suez-canal.png')">
+            <img src="/assets/egypt-suez/suez-canal.png" alt="Suez Canal">
         </div>
     </div>
 </div>

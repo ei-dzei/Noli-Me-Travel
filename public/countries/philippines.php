@@ -23,12 +23,12 @@
     </div>
 
     <div class="assets-section gallery-row">
-        <div class="gallery-item" onclick="openassetsModal('Port of Manila', '', '../public/assets/philippines/port.png')">
-            <img src="../public/assets/philippines/port.png" alt="Port of Manila">
+        <div class="gallery-item" onclick="openassetsModal('Port of Manila', '', '/assets/philippines/port.png')">
+            <img src="/assets/philippines/port.png" alt="Port of Manila">
         </div>
 
-        <div class="gallery-item" onclick="openassetsModal('Salvadora Steamer', 'Rizal secretly leaves the Philippines for the first time on the Spanish steamer Salvadora, bound for Singapore.', '../public/assets/philippines/salvadora.png')">
-            <img src="../public/assets/philippines/salvadora.png" alt="Salvadora Steamer">
+        <div class="gallery-item" onclick="openassetsModal('Salvadora Steamer', 'Rizal secretly leaves the Philippines for the first time on the Spanish steamer Salvadora, bound for Singapore.', '/assets/philippines/salvadora.png')">
+            <img src="/assets/philippines/salvadora.png" alt="Salvadora Steamer">
         </div>
     </div>
 </div>

@@ -27,34 +27,34 @@
     </div>
 
     <div class="assets-section gallery-row">
-        <div class="gallery-item" onclick="openassetsModal('Island', 'Rizal saw a beautiful island that reminded him of “Talim Island with the Susong Dalaga”.', '../public/assets/singapore/beautiful-island.png')">
-            <img src="../public/assets/singapore/beautiful-island.png" alt="Island">
+        <div class="gallery-item" onclick="openassetsModal('Island', 'Rizal saw a beautiful island that reminded him of “Talim Island with the Susong Dalaga”.', '/assets/singapore/beautiful-island.png')">
+            <img src="/assets/singapore/beautiful-island.png" alt="Island">
         </div>
 
-        <div class="gallery-item" onclick="openassetsModal('Hotel de la Paz', 'Rizal checks into Hotel de la Paz and spends about two days walking around the city, observing its busy harbor and multicultural streets.', '../public/assets/singapore/hotel-dela-paz.png')">
-            <img src="../public/assets/singapore/hotel-dela-paz.png" alt="Hotel de la Paz">
+        <div class="gallery-item" onclick="openassetsModal('Hotel de la Paz', 'Rizal checks into Hotel de la Paz and spends about two days walking around the city, observing its busy harbor and multicultural streets.', '/assets/singapore/hotel-dela-paz.png')">
+            <img src="/assets/singapore/hotel-dela-paz.png" alt="Hotel de la Paz">
         </div>
 
-        <div class="gallery-item" onclick="openassetsModal('Botanical Garden', 'Rizal saw the famous Botanical Garden, the beautiful Buddhist temples, the busy shopping district, and the statue of Sir Thomas Stanford Raffles.', '../public/assets/singapore/botanical-garden.png')">
-            <img src="../public/assets/singapore/botanical-garden.png" alt="Botanical Garden">
+        <div class="gallery-item" onclick="openassetsModal('Botanical Garden', 'Rizal saw the famous Botanical Garden, the beautiful Buddhist temples, the busy shopping district, and the statue of Sir Thomas Stanford Raffles.', '/assets/singapore/botanical-garden.png')">
+            <img src="/assets/singapore/botanical-garden.png" alt="Botanical Garden">
         </div>
     </div>
 
     <div class="assets-section gallery-row">
-        <div class="gallery-item" onclick="openassetsModal('Buddhist Temples', 'Rizal saw the famous Botanical Garden, the beautiful Buddhist temples, the busy shopping district, and the statue of Sir Thomas Stanford Raffles.', '../public/assets/singapore/buddhist-temples.png')">
-            <img src="../public/assets/singapore/buddhist-temples.png" alt="Buddhist Temples">
+        <div class="gallery-item" onclick="openassetsModal('Buddhist Temples', 'Rizal saw the famous Botanical Garden, the beautiful Buddhist temples, the busy shopping district, and the statue of Sir Thomas Stanford Raffles.', '/assets/singapore/buddhist-temples.png')">
+            <img src="/assets/singapore/buddhist-temples.png" alt="Buddhist Temples">
         </div>
 
-        <div class="gallery-item" onclick="openassetsModal('Shopping District', 'Rizal saw the famous Botanical Garden, the beautiful Buddhist temples, the busy shopping district, and the statue of Sir Thomas Stanford Raffles.', '../public/assets/singapore/shopping-district.png')">
-            <img src="../public/assets/singapore/shopping-district.png" alt="Shopping District">
+        <div class="gallery-item" onclick="openassetsModal('Shopping District', 'Rizal saw the famous Botanical Garden, the beautiful Buddhist temples, the busy shopping district, and the statue of Sir Thomas Stanford Raffles.', '/assets/singapore/shopping-district.png')">
+            <img src="/assets/singapore/shopping-district.png" alt="Shopping District">
         </div>
 
-        <div class="gallery-item" onclick="openassetsModal('Statue of Sir Thomas Stanford Raffles', 'Rizal saw the famous Botanical Garden, the beautiful Buddhist temples, the busy shopping district, and the statue of Sir Thomas Stanford Raffles.', '../public/assets/singapore/statue-sir-thomas.png')">
-            <img src="../public/assets/singapore/statue-sir-thomas.png" alt="Statue of Sir Thomas Stanford Raffles">
+        <div class="gallery-item" onclick="openassetsModal('Statue of Sir Thomas Stanford Raffles', 'Rizal saw the famous Botanical Garden, the beautiful Buddhist temples, the busy shopping district, and the statue of Sir Thomas Stanford Raffles.', '/assets/singapore/statue-sir-thomas.png')">
+            <img src="/assets/singapore/statue-sir-thomas.png" alt="Statue of Sir Thomas Stanford Raffles">
         </div>
 
-        <div class="gallery-item" onclick="openassetsModal('Djemnah Steamer', 'On May 11, 1882, Rizal transferred to the French steamer Djemnah, which left Singapore for Europe.', '../public/assets/singapore/djemnah.png')">
-            <img src="../public/assets/singapore/djemnah.png" alt="Djemnah Steamer">
+        <div class="gallery-item" onclick="openassetsModal('Djemnah Steamer', 'On May 11, 1882, Rizal transferred to the French steamer Djemnah, which left Singapore for Europe.', '/assets/singapore/djemnah.png')">
+            <img src="/assets/singapore/djemnah.png" alt="Djemnah Steamer">
         </div>
     </div>
 </div>
