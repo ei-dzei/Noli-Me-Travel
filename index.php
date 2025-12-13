@@ -117,6 +117,16 @@
         </div>
     </div>
 
+    <div id="assetsModal" class="modal">
+        <div class="modal-backdrop" onclick="closeassetsModal()"></div>
+        <div class="assets-card">
+            <button class="modal-close-wax" onclick="closeassetsModal()" style="top:-15px; right:-15px;">&times;</button>
+            <img id="assetsImg" class="assets-image-large" src="" alt="">
+            <h2 id="assetsTitle" class="assets-title"></h2>
+            <p id="assetsDesc" class="assets-desc"></p>
+        </div>
+    </div>
+
     <div class="world-map">
         <div class="map-container">
             <?php include 'world-map.php'; ?>
