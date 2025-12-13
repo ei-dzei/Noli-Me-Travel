@@ -31,7 +31,7 @@ countries.forEach((country) => {
         //that belong to the same country
         const matchingElements = document.querySelectorAll(selector);
         //Add hover effect to all matching elements
-        matchingElements.forEach(el => el.style.fill = "#c99aff");
+        matchingElements.forEach(el => el.style.fill = "#d2a679");
     });
     //Add a mouse out event (cursor leaves a country)
     country.addEventListener("mouseout", function() {

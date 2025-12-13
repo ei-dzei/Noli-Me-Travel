@@ -30,10 +30,7 @@
 
 body {
   font-family: var(--font-body);
-  background: linear-gradient(rgba(42, 36, 25, 0.85), rgba(42, 36, 25, 0.85)),
-    repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.1) 0px, transparent 1px, transparent 40px, rgba(0, 0, 0, 0.1) 41px),
-    linear-gradient(180deg, #2a2419 0%, #3d2f1f 50%, #2a2419 100%);
-  background-color: #2a2419;
+  background: #fdf5e6; 
   color: var(--color-text);
   overflow: hidden;
   height: 100vh;
@@ -47,7 +44,7 @@ body {
   width: max-content;
   height: max-content;
   min-height: 30em;
-  background-color: #1a1612;
+  background-color: #fdf5e6; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,16 +58,28 @@ svg {
   filter: sepia(0.15) contrast(1.05);
 }
 
+svg:hover {
+  filter: sepia(0.2) contrast(1.1);
+  transition: all 20ms ease-in-out;
+}
+
 path {
-  fill: #d4c4a8;
-  stroke: #8b7355;
+  fill: #8b5a2b;
+  stroke: #5c4033;
   stroke-width: 0.5;
+  
+  filter: drop-shadow(0 0 0 rgba(0,0,0,0));
 }
 
 path:hover {
-  fill: #4a3a2a;
+  fill: #d2a679; 
   cursor: pointer;
-  transition: fill 200ms ease;
+  
+  filter: drop-shadow(3px 5px 5px rgba(0, 0, 0, 0.5));
+  transition: all 20ms ease-in-out;
+  
+  position: relative;
+  z-index: 10;
 }
 
 .side-panel {
