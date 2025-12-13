@@ -20,16 +20,16 @@
     </div>
 
     <div class="assets-section gallery-row">
-        <div class="gallery-item" onclick="openassetsModal('Château d’If', 'The famous fortress-prison featured in Alexandre Dumas\' novel, The Count of Monte Cristo. Rizal visited this site as a fan of the book.', './assets/yemen-aden/aden-city.png')">
-            <img src="assets\italy\castle-st-elmo.png" alt="Château d’If">
+        <div class="gallery-item" onclick="openassetsModal('Castle of St. Telmo', 'Rizal was captivated by the beauty of the Castle of St. Telmo', 'assets/italy/castle-st-elmo.png')">
+            <img src="assets\italy\castle-st-elmo.png" alt="Castle of St. Telmo">
         </div>
 
-        <div class="gallery-item" onclick="openassetsModal('Port of Marseilles', 'Rizal was impressed by the busy and modern harbor.', './assets/yemen-aden/camels.png')">
-            <img src="assets\italy\mount-vesuvius.png" alt="Port of Marseilles">
+        <div class="gallery-item" onclick="openassetsModal('Mount Vesuvius', 'Rizal was captivated by the beauty of the Mount Vesuvius', 'assets/italy/mount-vesuvius.png')">
+            <img src="assets\italy\mount-vesuvius.png" alt="Mount Vesuvius">
         </div>
 
-        <div class="gallery-item" onclick="openassetsModal('Express Train', 'Rizal took an express train crossing the Pyrenees mountains to reach Barcelona, Spain.', './assets/yemen-aden/mountains.png')">
-            <img src="assets\italy\naples-city.png" alt="Train in France">
+        <div class="gallery-item" onclick="openassetsModal('Naples', 'Rizal reached Naples, which pleased him because of its business activity, lively people, and its panoramic beauty.', 'assets/italy/naples-city.png')">
+            <img src="assets\italy\naples-city.png" alt="Naples, Italy">
         </div>
     </div>
 
