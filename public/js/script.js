@@ -210,7 +210,7 @@ function handleCountryClick(e) {
                 </h2>
                 
                 <div class="photo-slot" style="transform: rotate(-2deg); width: 260px; height: auto; padding: 10px; margin: 0 auto;">
-                    <img src="../public/assets/balut.jpg" style="width: 100%; display: block;" alt="Brazil Secret">
+                    <img src="/assets/balut.jpg" style="width: 100%; display: block;" alt="Brazil Secret">
                 </div>
 
                 <p style="font-family: var(--font-body); font-size: 0.9rem; margin-top: 20px; line-height: 1.6;">
@@ -226,7 +226,7 @@ function handleCountryClick(e) {
                 </h2>
                 
                 <div class="photo-slot" style="transform: rotate(-2deg); width: 260px; height: auto; padding: 10px; margin: 0 auto;">
-                    <img src="../public/assets/rizal-bracken.png" style="width: 100%; display: block;" alt="Hongkong Secret">
+                    <img src="/assets/rizal-bracken.png" style="width: 100%; display: block;" alt="Hongkong Secret">
                 </div>
             `;
         }
