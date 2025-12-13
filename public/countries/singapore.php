@@ -38,7 +38,9 @@
         <div class="gallery-item" onclick="openassetsModal('Botanical Garden', 'Rizal saw the famous Botanical Garden, the beautiful Buddhist temples, the busy shopping district, and the statue of Sir Thomas Stanford Raffles.', '../public/assets/singapore/botanical-garden.png')">
             <img src="../public/assets/singapore/botanical-garden.png" alt="Botanical Garden">
         </div>
+    </div>
 
+    <div class="assets-section gallery-row">
         <div class="gallery-item" onclick="openassetsModal('Buddhist Temples', 'Rizal saw the famous Botanical Garden, the beautiful Buddhist temples, the busy shopping district, and the statue of Sir Thomas Stanford Raffles.', '../public/assets/singapore/buddhist-temples.png')">
             <img src="../public/assets/singapore/buddhist-temples.png" alt="Buddhist Temples">
         </div>
