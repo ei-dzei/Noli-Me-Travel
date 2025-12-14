@@ -64,7 +64,7 @@
                         </p>
                         <br>
                         <p>
-                            You are about to retrace the steps of the First Filipino. As he passed through foreign ports like Singapore, Colombo, and Marseilles, finally reaching Barcelona, his worldview expanded.
+                            You are about to retrace the steps of the 'First Filipino'. As he passed through foreign ports like Singapore, Colombo, and Marseilles, finally reaching Barcelona, his worldview expanded.
                         </p>
                         <p>Use your mouse to <strong>Drag</strong> the map and explore. Click on highlighted countries to find out what happened from that location.</p>
                     </div>

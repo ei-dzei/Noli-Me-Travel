@@ -14,8 +14,7 @@
     <div class="text-columns single-col">
         <p>
             <span class="drop-cap">O</span>
-            n the night of June 12, 1882, Djemnah docked at the French harbor of Marseilles. Rizal visited the famous Château d’If, where Dantes, hero of The Count of Monte Cristo, was imprisoned.<br>
-            Rizal stayed for two and a half days in Marseilles.
+            n the night of June 11, 1882, Rizal reached Naples, which pleased him because of its business activity, lively people, and its panoramic beauty. He was captivated by Mount Vesuvius, the Castle of St. Telmo, and other historic sights of the city.
         </p>
     </div>
 
